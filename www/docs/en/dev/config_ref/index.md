@@ -160,6 +160,8 @@ Examples:
 </widget>
 ```
 
+Note that apps intended to be distributed by the app stores is strongly discouraged to load code from remote sources (e.g. `http://myserver.example.com`) as it could be breaking the [App Store](https://developer.apple.com/app-store/review/guidelines/) or [Google Play Store](https://play.google.com/about/developer-content-policy-print/) policies. Source code should be bundled with the app instead.
+
 ## access
 Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server.
 See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
