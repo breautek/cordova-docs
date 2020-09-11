@@ -54,19 +54,43 @@ different screen resolutions.
 
 ## Android
 
-On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**. To use Adaptive Icons, you need to have installed at least version 9.0.0 of **Cordova** and version 8.0.0 of **Cordova-Android**.
+Android offers two different icon modes: adaptive and static. Adaptive icons allows for some visual animation, while static icons are simply a still graphic.
 
-Attributes    | Description
---------------|--------------------------------------------------------------------------------
-background    | *Required for Adaptive* <br/> Location of the image (png or vector) relative to your project directory, or color reference
-foreground    | *Required for Adaptive* <br/> Location of the image (png or vector) relative to your project directory, or color reference
-density       | *Optional* <br/> Specified icon density
+Regardless of which icon method used, icons should be supplied in a variety of different density resolutions. The table below describes the supported density levels and their respective pixel resolutions.
+
+Density     | Resolution
+--------    | --------------
+ldpi        | 36x36 px
+mdpi        | 48x48 px
+hdpi        | 72x72 px
+xhdpi       | 96x96 px
+xxhdpi      | 144x144 px
+xxxhdpi     | 192x192 px
+
+The subsections below will reference these density levels.
 
 ### Adaptive Icons
 
-To use the adaptive icons the `background` and `foreground` attributes must be defined in place of the `src` attribute. The `src` attribute is not used for adaptive icons.
+Dependencies    | Minimum Version Required
+------------    | ----------------
+cordova | 9.0.0
+cordova-android | 8.0.0
 
-#### Adaptive Icon with Images:
+Adaptive icons are the modern and recommended way of supplying icons to your android apps. They are powered by providing a background graphic and a foreground graphic.
+
+#### config.xml
+
+To define an adaptive icon, use the `<icon>` tag. The table below documents supported attributes.
+
+Attributes    | Description
+--------------|--------------------------------------------------------------------------------
+background    | *Required* <br />Location of the image (png or vector) relative to your project directory, or color reference.
+foreground    | *Required* <br/> Location of the image (png or vector) relative to your project directory, or color reference.
+density       | *Required* <br /> Specified icon density. Valid values: `ldpi`, `mdpi`, `hdpi`, `xhdpi`, `xxhdpi`, `xxxhdpi`.
+src           | *Optional* <br /> A fallback static icon to use for devices that don't support adaptive icons. If not supplied, the `foreground` attribute will be used.
+
+
+##### Example: Adaptive Icon with Images:
 ```xml
 <platform name="android">
   <icon background="res/icon/android/ldpi-background.png" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
@@ -78,9 +102,7 @@ To use the adaptive icons the `background` and `foreground` attributes must be d
 </platform>
 ```
 
-**Note:** In this example, the foreground image will also be used as the fallback icon for Android devices that do not support the adaptive icons. The fallback icon can be overridden by setting the src attribute.
-
-#### Adaptive Icon with Vectors:
+##### Example: Adaptive Icon with Vectors:
 ```xml
 <platform name="android">
   <icon background="res/icon/android/ldpi-background.xml" density="ldpi" foreground="res/icon/android/ldpi-foreground.xml" src="res/android/ldpi.png" />
@@ -94,8 +116,10 @@ To use the adaptive icons the `background` and `foreground` attributes must be d
 
 **Note:** In this example, the src attribute must be defined when then foreground attribute is defined with a vector or color.
 
-#### Adaptive Icon with Colors:
+##### Example: Adaptive Icon with Colors:
+
 Create a `res/values/colors.xml` resource file in your project directory to store the app's color definitions.
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -118,29 +142,31 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 </platform>
 ```
 
-### Standard Icons
+### Static Icons
+
+Unlike adaptive icons, static icons are simply defined by providing a png graphic for each density level. They are still declared by using an `<icon>` directive. They must contain the following attributes:
+
+Attributes      | Description
+----------      | ----------------
+src             | *Required* <br />Location of the png file relative to your project directory.
+density         | *Required* <br />Specified icon density. Valid values: `ldpi`, `mdpi`, `hdpi`, `xhdpi`, `xxhdpi`, `xxxhdpi`.
+
+##### Example
 
 ```xml
-    <platform name="android">
-        <!--
-            ldpi    : 36x36 px
-            mdpi    : 48x48 px
-            hdpi    : 72x72 px
-            xhdpi   : 96x96 px
-            xxhdpi  : 144x144 px
-            xxxhdpi : 192x192 px
-        -->
-        <icon src="res/android/ldpi.png" density="ldpi" />
-        <icon src="res/android/mdpi.png" density="mdpi" />
-        <icon src="res/android/hdpi.png" density="hdpi" />
-        <icon src="res/android/xhdpi.png" density="xhdpi" />
-        <icon src="res/android/xxhdpi.png" density="xxhdpi" />
-        <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
-    </platform>
+<platform name="android">
+    <icon src="res/android/ldpi.png" density="ldpi" />
+    <icon src="res/android/mdpi.png" density="mdpi" />
+    <icon src="res/android/hdpi.png" density="hdpi" />
+    <icon src="res/android/xhdpi.png" density="xhdpi" />
+    <icon src="res/android/xxhdpi.png" density="xxhdpi" />
+    <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
+</platform>
 ```
 
 ### See Also
 - [Android icon guide](https://www.google.com/design/spec/style/icons.html)
+- [Andoid - Designing adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
 - [Android - Supporting multiple screens](http://developer.android.com/guide/practices/screens_support.html)
 
 ## Browser
