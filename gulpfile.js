@@ -66,7 +66,7 @@ var PLUGINS_SRC_FILE = path.join(PLUGINS_SRC_DIR, 'app.js');
 var BASE_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
 var DEV_CONFIGS = [DEV_CONFIG_FILE];
 var PROD_CONFIGS = [PROD_CONFIG_FILE];
-var DEV_FLAGS = ['--trace'];
+var DEV_FLAGS = ['--trace', '--verbose'];
 var PROD_FLAGS = [];
 
 var BASE_URL = '';
