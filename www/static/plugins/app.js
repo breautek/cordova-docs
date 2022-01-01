@@ -17,15 +17,15 @@
     under the License.
 */
 
-var Preact          = window.Preact = require('preact'),
-    h               = require('preact').h,
-    createClass     = require('preact-compat').createClass,
-    SearchBar       = require('./searchbar.jsx'),
-    PluginList      = require('./pluginlist.jsx'),
-    PlatformButton  = require('./platformbutton.jsx')
-    App             = {},
-    SortDropdown    = require('./sortdropdown.jsx'),
-    SortCriteria    = require('./SortCriteria');
+var Preact = window.Preact = require('preact');
+// eslint-disable-next-line no-unused-vars
+var h = require('preact').h;
+var createClass = require('preact-compat').createClass;
+var SearchBar = require('./searchbar.jsx');
+var PluginList = require('./pluginlist.jsx');
+var PlatformButton = require('./platformbutton.jsx');
+var SortDropdown = require('./sortdropdown.jsx');
+var SortCriteria = require('./SortCriteria');
 
 var INPUT_DELAY = 500; // in milliseconds
 
@@ -33,23 +33,23 @@ var timer = null;
 var Constants = {
     DownloadCountBatch: 100,
     NpmSearchInitialSize: 500
-}
+};
 
 var UrlParameters = {
     SortBy: 'sortBy',
     Query: 'q',
-    Platfroms: 'platforms',
-}
+    Platfroms: 'platforms'
+};
 
 var App = createClass({
-    getInitialState: function() {
+    getInitialState: function () {
         var staticFilters = [];
-        staticFilters['platforms'] = [];
-        staticFilters['authors'] = [];
-        staticFilters['licenses'] = [];
+        staticFilters.platforms = [];
+        staticFilters.authors = [];
+        staticFilters.licenses = [];
         var platforms = App.getURLParameter(UrlParameters.Platfroms);
-        if(platforms) {
-            staticFilters['platforms'] = staticFilters['platforms'].concat(platforms.split(','));
+        if (platforms) {
+            staticFilters.platforms = staticFilters.platforms.concat(platforms.split(','));
         }
         var q = App.getURLParameter(UrlParameters.Query);
         var sortBy = App.getURLParameter(UrlParameters.SortBy);
@@ -63,7 +63,7 @@ var App = createClass({
             staticFilters: staticFilters,
             sortCriteria: sortBy,
             downloadsReceived: false
-        }
+        };
 
         if (q) {
             state.filterText = q;
@@ -73,13 +73,13 @@ var App = createClass({
 
         return state;
     },
-    handleUserInput: function(filterText) {
+    handleUserInput: function (filterText) {
         var self = this;
         /* We receive events for all inputs, so make sure text changed */
-        if(this.state.filterText !== filterText) {
+        if (this.state.filterText !== filterText) {
             /* Routing logic */
-            var platformFilters = this.state.staticFilters["platforms"];
-            delay(function(){
+            var platformFilters = this.state.staticFilters.platforms;
+            delay(function () {
                 App.updateURL(filterText, platformFilters, self.state.sortCriteria);
             }, INPUT_DELAY);
 
@@ -89,18 +89,17 @@ var App = createClass({
             });
         }
     },
-    toggleCondition: function(keyword, condition) {
+    toggleCondition: function (keyword, condition) {
         var state = this.state;
-        this.setState(function(previousState, currentProps) {
+        this.setState(function (previousState, currentProps) {
             var conditionIndex = previousState.staticFilters[keyword].indexOf(condition);
-            if(conditionIndex > -1) {
+            if (conditionIndex > -1) {
                 previousState.staticFilters[keyword].splice(conditionIndex, 1);
-            }
-            else {
+            } else {
                 previousState.staticFilters[keyword].push(condition);
             }
 
-            App.updateURL(previousState.filterText, previousState.staticFilters['platforms'], previousState.sortCriteria);
+            App.updateURL(previousState.filterText, previousState.staticFilters.platforms, previousState.sortCriteria);
 
             return {
                 staticFilters: previousState.staticFilters,
@@ -109,265 +108,264 @@ var App = createClass({
             };
         });
     },
-    setSort: function(sort) {
+    setSort: function (sort) {
         var state = this.state;
-        this.setState(function(previousState, currentProps) {
-            App.sortPlugins(previousState.plugins, sort)
-             delay(function(){
-                App.updateURL(previousState.filterText, previousState.staticFilters['platforms'], previousState.sortCriteria);
+        this.setState(function (previousState, currentProps) {
+            App.sortPlugins(previousState.plugins, sort);
+            delay(function () {
+                App.updateURL(previousState.filterText, previousState.staticFilters.platforms, previousState.sortCriteria);
             }, INPUT_DELAY);
             return {
                 plugins: previousState.plugins,
                 searchResults: App.filterPlugins(previousState.plugins, state.filterText, state.staticFilters),
                 sortCriteria: sort
-            }
+            };
         });
     },
     statics: {
-        appendURLParameter : function(qs, urlParameter) {
-            if(!qs) {
+        appendURLParameter: function (qs, urlParameter) {
+            if (!qs) {
                 qs = '?' + urlParameter + '=';
             } else {
                 qs = qs + '&' + urlParameter + '=';
             }
             return qs;
         },
-        getURLParameter : function(name) {
-                try {
-                    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)
-                        ||[,""])[1].replace(/\+/g, '%20'))||null;
-                } catch(error) {
-                    // Improperly encoded URLs are ignored
-                    if (error instanceof URIError) {
-                        window.history.replaceState({}, "", "./");
-                        return null;
-                    }
-
-                    // Throw other errors back out
-                    throw error;
+        getURLParameter: function (name) {
+            try {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.search) ||
+                        [, ''])[1].replace(/\+/g, '%20')) || null;
+            } catch (error) {
+                // Improperly encoded URLs are ignored
+                if (error instanceof URIError) {
+                    window.history.replaceState({}, '', './');
+                    return null;
                 }
+
+                // Throw other errors back out
+                throw error;
+            }
         },
-        shallowCopy: function(src) {
+        shallowCopy: function (src) {
             var dst = {};
-            for(var i in src) {
-                if(src.hasOwnProperty(i)) {
+            for (var i in src) {
+                if (Object.prototype.hasOwnProperty.call(src, i)) {
                     dst[i] = src[i];
                 }
             }
             return dst;
         },
-        tagOfficialPlugins: function() {
+        tagOfficialPlugins: function () {
 
         },
-        filterPlugins: function(plugins, filter, staticFilters) {
-            var contains = function(values, pluginInfo) {
+        filterPlugins: function (plugins, filter, staticFilters) {
+            var contains = function (values, pluginInfo) {
                 var allValuesPresent = true;
-                if(values.length == 0) {
+                if (values.length === 0) {
                     return allValuesPresent;
                 }
-                if(!pluginInfo) {
+                if (!pluginInfo) {
                     return false;
                 }
-                values.forEach(function(value) {
+                values.forEach(function (value) {
                     var valuePresent = false;
-                    for(var index=0; index < pluginInfo.length; index++) {
-                        if(pluginInfo[index] && pluginInfo[index].toLowerCase().indexOf(value.toLowerCase()) > -1) {
+                    for (var index = 0; index < pluginInfo.length; index++) {
+                        if (pluginInfo[index] && pluginInfo[index].toLowerCase().indexOf(value.toLowerCase()) > -1) {
                             valuePresent = true;
                         }
                     }
-                    if(!valuePresent) {
+                    if (!valuePresent) {
                         allValuesPresent = false;
                     }
                 });
                 return allValuesPresent;
-            }
-            var populateFilters = function(filterText) {
-                var searchStrings = filterText.split(" ");
+            };
+            var populateFilters = function (filterText) {
+                var searchStrings = filterText.split(' ');
                 var filters = [];
-                filters['platforms'] = [];
-                filters['authors'] = [];
-                filters['licenses'] = [];
-                filters['searchWords'] = [];
+                filters.platforms = [];
+                filters.authors = [];
+                filters.licenses = [];
+                filters.searchWords = [];
+                var param;
 
-                searchStrings.forEach(function(searchString) {
-                    var keywords = searchString.split(":");
-                    if(keywords.length == 1) {
-                        var param = keywords[0].trim();
-                        if(param) {
-                            filters['searchWords'].push(param);
+                searchStrings.forEach(function (searchString) {
+                    var keywords = searchString.split(':');
+                    if (keywords.length === 1) {
+                        param = keywords[0].trim();
+                        if (param) {
+                            filters.searchWords.push(param);
                         }
-                    }
-                    else if(keywords[1].trim()) {
-                        var param = keywords[1].trim();
-                        switch(keywords[0]) {
-                            case 'platform':
-                                filters['platforms'].push(param);
-                                break;
-                            case 'author':
-                                filters['authors'].push(param);
-                                break;
-                            case 'license':
-                                filters['licenses'].push(param);
-                                break;
-                            default:
-                                filters['searchWords'].push(searchString);
+                    } else if (keywords[1].trim()) {
+                        param = keywords[1].trim();
+                        switch (keywords[0]) {
+                        case 'platform':
+                            filters.platforms.push(param);
+                            break;
+                        case 'author':
+                            filters.authors.push(param);
+                            break;
+                        case 'license':
+                            filters.licenses.push(param);
+                            break;
+                        default:
+                            filters.searchWords.push(searchString);
                         }
-                    }
-                    else {
-                        filters['searchWords'].push(searchString);
+                    } else {
+                        filters.searchWords.push(searchString);
                     }
                 });
                 return filters;
-            }
+            };
             var results = [];
             var filters = populateFilters(filter);
 
-            var combine = function(filter1, filter2) {
-                var result = [].concat(filter1)
-                for(var i = 0; i < filter2.length; i++) {
-                    if(result.indexOf(filter2[i]) === -1) {
-                        result.push(filter2[i])
+            var combine = function (filter1, filter2) {
+                var result = [].concat(filter1);
+                for (var i = 0; i < filter2.length; i++) {
+                    if (result.indexOf(filter2[i]) === -1) {
+                        result.push(filter2[i]);
                     }
                 }
                 return result;
-            }
+            };
 
             for (var i = 0; i < plugins.length; i++) {
                 var plugin = plugins[i];
                 var fullPluginText = plugin.name.concat(plugin.author, plugin.keywords, plugin.license, plugin.description);
 
-                if(contains(combine(filters['platforms'], staticFilters['platforms']), plugin.keywords)
-                    && contains(combine(filters['authors'], staticFilters['authors']), plugin.author)
-                    && contains(combine(filters['licenses'], staticFilters['licenses']), plugin.license)
-                    && contains(filters['searchWords'], fullPluginText)) {
-                        results.push(plugin);
+                if (contains(combine(filters.platforms, staticFilters.platforms), plugin.keywords) &&
+                    contains(combine(filters.authors, staticFilters.authors), plugin.author) &&
+                    contains(combine(filters.licenses, staticFilters.licenses), plugin.license) &&
+                    contains(filters.searchWords, fullPluginText)) {
+                    results.push(plugin);
                 }
-            };
+            }
             return results;
         },
-        sortPlugins: function(plugins, criteria) {
+        sortPlugins: function (plugins, criteria) {
             // Search results should be deterministic, so we need a secondary
             // sort function for cases where the plugins are equal
-            var compareName = function(p1, p2) {
-                if(p1.name === p2.name) {
+            var compareName = function (p1, p2) {
+                if (p1.name === p2.name) {
                     return 0;
-                } else if(p1.name > p2.name) {
+                } else if (p1.name > p2.name) {
                     return 1;
                 } else {
                     return -1;
                 }
-            }
-            switch(criteria) {
-                case SortCriteria.Downloads:
-                    plugins.sort(function(p1, p2) {
-                        if(!p1.downloadCount) {
-                            return 1;
-                        } else if(!p2.downloadCount) {
-                            return -1;
-                        }
-                        if(p2.downloadCount === p1.downloadCount) {
-                            return compareName(p1, p2);
-                        };
-                        return p2.downloadCount - p1.downloadCount;
-                    });
-                    break;
-                case SortCriteria.RecentlyUpdated:
-                    plugins.sort(function(p1, p2) {
-                        if(p2.modified === p1.modified) {
-                            return compareName(p1, p2);
-                        };
-                        return p1.modified - p2.modified;
-                    });
-                    break;
-                case SortCriteria.Quality:
-                default:
-                    plugins.sort(function(p1, p2) {
-                        if(p2.rating === p1.rating) {
-                            return compareName(p1, p2);
-                        };
-                        return p2.rating - p1.rating;
-                    });
-                    break;
+            };
+            switch (criteria) {
+            case SortCriteria.Downloads:
+                plugins.sort(function (p1, p2) {
+                    if (!p1.downloadCount) {
+                        return 1;
+                    } else if (!p2.downloadCount) {
+                        return -1;
+                    }
+                    if (p2.downloadCount === p1.downloadCount) {
+                        return compareName(p1, p2);
+                    }
+                    return p2.downloadCount - p1.downloadCount;
+                });
+                break;
+            case SortCriteria.RecentlyUpdated:
+                plugins.sort(function (p1, p2) {
+                    if (p2.modified === p1.modified) {
+                        return compareName(p1, p2);
+                    }
+                    return p1.modified - p2.modified;
+                });
+                break;
+            case SortCriteria.Quality:
+            default:
+                plugins.sort(function (p1, p2) {
+                    if (p2.rating === p1.rating) {
+                        return compareName(p1, p2);
+                    }
+                    return p2.rating - p1.rating;
+                });
+                break;
             }
             return plugins;
         },
-        updateURL: function(filterText, platformFilters, sortCriteria) {
+        updateURL: function (filterText, platformFilters, sortCriteria) {
             var query = '';
             var stateObj = {};
-            if(filterText) {
+            if (filterText) {
                 var filterTextLowerCase = filterText;
                 query = App.appendURLParameter(query, UrlParameters.Query);
                 query += encodeURIComponent(filterTextLowerCase);
                 stateObj.filterText = filterTextLowerCase;
             }
 
-            if(platformFilters.length > 0) {
+            if (platformFilters.length > 0) {
                 query = App.appendURLParameter(query, UrlParameters.Platfroms);
                 query += encodeURIComponent(platformFilters.join());
                 stateObj.platforms = platformFilters;
             }
 
-            if(sortCriteria !== SortCriteria.Quality) {
+            if (sortCriteria !== SortCriteria.Quality) {
                 query = App.appendURLParameter(query, UrlParameters.SortBy);
                 query += encodeURIComponent(sortCriteria);
                 stateObj.sortBy = sortCriteria;
             }
-            window.history.replaceState(stateObj, "", query);
+            window.history.replaceState(stateObj, '', query);
             ga('send', 'pageview', '/index.html' + query);
-        },
+        }
     },
-    componentDidMount: function() {
-        var plugins = [],
-            officialPlugins = require('./official-plugins.json').plugins,
-            blacklistedPlugins = require('./blacklisted-plugins.json').plugins,
-            pluginCount = 0,
-            self = this,
-            queryProtocol = window.location.protocol === "https:" ? "https:" : "http:",
-            queryHost = queryProtocol + "//npmsearch.com/query",
-            queryFields = "fields=name,keywords,license,description,author,modified,homepage,version,rating",
-            queryKeywords = "q=keywords:%22ecosystem:cordova%22",
-            queryInitialSize = Constants.NpmSearchInitialSize,
-            baseUrl = queryHost + "?" + queryFields + "&" + queryKeywords + "&sort=rating:desc";
+    componentDidMount: function () {
+        var plugins = [];
+        var officialPlugins = require('./official-plugins.json').plugins;
+        var blacklistedPlugins = require('./blacklisted-plugins.json').plugins;
+        var pluginCount = 0;
+        var self = this;
+        var queryProtocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
+        var queryHost = queryProtocol + '//npmsearch.com/query';
+        var queryFields = 'fields=name,keywords,license,description,author,modified,homepage,version,rating';
+        var queryKeywords = 'q=keywords:%22ecosystem:cordova%22';
+        var queryInitialSize = Constants.NpmSearchInitialSize;
+        var baseUrl = queryHost + '?' + queryFields + '&' + queryKeywords + '&sort=rating:desc';
 
-        xhrRequest(baseUrl + "&size=" + queryInitialSize + "&start=0", function(xhrResult) {
+        xhrRequest(baseUrl + '&size=' + queryInitialSize + '&start=0', function (xhrResult) {
             plugins = xhrResult.results;
             pluginCount = xhrResult.total;
             if (pluginCount <= queryInitialSize) {
                 processPlugins.bind(self, officialPlugins, plugins)();
             } else {
-                xhrRequest(baseUrl + "&size=" + (pluginCount - queryInitialSize) + "&start=" + queryInitialSize, function(xhrResult) {
-                        plugins = [].concat(plugins, xhrResult.results);
-                        processPlugins.bind(self, officialPlugins, plugins)();
-                }, function() { console.log('xhr err'); });
+                xhrRequest(baseUrl + '&size=' + (pluginCount - queryInitialSize) + '&start=' + queryInitialSize, function (xhrResult) {
+                    plugins = [].concat(plugins, xhrResult.results);
+                    processPlugins.bind(self, officialPlugins, plugins)();
+                }, function () { console.log('xhr err'); });
             }
-        }, function() { console.log('xhr err'); });
+        }, function () { console.log('xhr err'); });
 
-        var getDownloadCount = function(plugins) {
-            var packageNames = "";
+        var getDownloadCount = function (plugins) {
+            var packageNames = '';
             var downloadCountRequests = [];
-            for(var index = 0; index < plugins.length; index++) {
+            for (var index = 0; index < plugins.length; index++) {
                 if (/^@.*\//.test(plugins[index].name)) {
                     continue;
                 }
-                packageNames += plugins[index].name + ",";
+                packageNames += plugins[index].name + ',';
 
-                if(index % Constants.DownloadCountBatch === 0 || index === plugins.length - 1) {
-                    downloadCountRequests.push($.getJSON("https://api.npmjs.org/downloads/point/last-month/" + packageNames));
-                    packageNames = "";
+                if (index % Constants.DownloadCountBatch === 0 || index === plugins.length - 1) {
+                    downloadCountRequests.push($.getJSON('https://api.npmjs.org/downloads/point/last-month/' + packageNames));
+                    packageNames = '';
                 }
             }
             // When all the download count requests return - we can populate the plugins and sort them
-            $.when.apply($, downloadCountRequests).done(function() {
-                for(var i = 0; i < arguments.length; i ++) {
+            $.when.apply($, downloadCountRequests).done(function () {
+                for (var i = 0; i < arguments.length; i++) {
                     var xhrResult = arguments[i][0];
-                    for(var j = 0; j < plugins.length; j++) {
-                        if(xhrResult[plugins[j].name]) {
+                    for (var j = 0; j < plugins.length; j++) {
+                        if (xhrResult[plugins[j].name]) {
                             plugins[j] = App.shallowCopy(plugins[j]);
                             plugins[j].downloadCount = xhrResult[plugins[j].name].downloads;
                         }
                     }
                 }
-                if(self.state.sortCriteria === SortCriteria.Downloads) {
+                if (self.state.sortCriteria === SortCriteria.Downloads) {
                     App.sortPlugins(plugins, self.state.sortCriteria);
                 }
                 self.setState({
@@ -376,30 +374,27 @@ var App = createClass({
                     downloadsReceived: true
                 });
             })
-            .fail( function() { console.log('xhr err'); });
-        }
+                .fail(function () { console.log('xhr err'); });
+        };
 
-        function processPlugins(officialPlugins, plugins) {
-            var pluginCount = plugins.length,
-                dateNow = new Date(),
-                oneDay = 1000*60*60*24;
+        function processPlugins (officialPlugins, plugins) {
+            var pluginCount = plugins.length;
+            var dateNow = new Date();
+            var oneDay = 1000 * 60 * 60 * 24;
 
-            officialPlugins.forEach(function(plugin) {
+            officialPlugins.forEach(function (plugin) {
                 for (var i = 0; i < plugins.length; i++) {
                     // Check if plugin name is in official list
                     if (plugins[i].name[0] === plugin) {
                         plugins[i].isOfficial = true;
                         return;
                     }
-                };
+                }
             });
 
-            for(var i = plugins.length -1; i >= 0 ; i--)
-            {
-                for(var j = 0; j < blacklistedPlugins.length; j++)
-                {
-                    if(plugins[i].name[0] === blacklistedPlugins[j])
-                    {
+            for (var i = plugins.length - 1; i >= 0; i--) {
+                for (var j = 0; j < blacklistedPlugins.length; j++) {
+                    if (plugins[i].name[0] === blacklistedPlugins[j]) {
                         plugins.splice(i, 1);
                         break;
                     }
@@ -409,7 +404,7 @@ var App = createClass({
             for (var i = 0; i < plugins.length; i++) {
                 // Calculate last time plugin is modified (in days)
                 plugins[i].modified = Math.ceil((dateNow - new Date(plugins[i].modified)) / oneDay);
-            };
+            }
 
             // Initial sort cannot be on downloads as download counts have not been populated.
             if (this.state.sortCriteria !== SortCriteria.Downloads) {
@@ -420,15 +415,14 @@ var App = createClass({
 
             if (this.isMounted()) {
                 var q = App.getURLParameter(UrlParameters.Query);
-                if(q) {
+                if (q) {
                     this.setState({
                         plugins: plugins,
                         filterText: q,
                         placeHolderText: 'Search ' + plugins.length + ' plugins...',
                         searchResults: App.filterPlugins(plugins, q, this.state.staticFilters)
                     });
-                }
-                else {
+                } else {
                     this.setState({
                         plugins: plugins,
                         placeHolderText: 'Search ' + plugins.length + ' plugins...',
@@ -439,14 +433,14 @@ var App = createClass({
             }
         }
     },
-    render: function() {
+    render: function () {
         var toggleCondition = this.toggleCondition;
-        var createPlatformButton = function(platform, keyword, state) {
-            var active = state.staticFilters["platforms"].indexOf(keyword) > -1;
+        var createPlatformButton = function (platform, keyword, state) {
+            var active = state.staticFilters.platforms.indexOf(keyword) > -1;
             return (
                 <PlatformButton platform={platform} keyword={keyword} initiallyActive={active} toggleCondition={toggleCondition}/>
             );
-        }
+        };
 
         var listContent = <PluginList plugins={this.state.searchResults}/>;
 
@@ -461,23 +455,23 @@ var App = createClass({
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="plugins_search_container">
-                            <SearchBar
-                                initialValue={this.state.filterText}
-                                placeHolderText={this.state.placeHolderText}
-                                onUserInput={this.handleUserInput}
-                            />
-                            <div className="whatisplugin_box">
-                                <img src="{{ site.baseurl }}/static/img/pluggy.png"/>
-                                <h2>What is a Cordova plugin?</h2>
-                                <p>A plugin is a bit of add-on code that provides JavaScript interface to native components.  They allow your app to use native device capabilities beyond what is available to pure web apps.</p>
+                                <SearchBar
+                                    initialValue={this.state.filterText}
+                                    placeHolderText={this.state.placeHolderText}
+                                    onUserInput={this.handleUserInput}
+                                />
+                                <div className="whatisplugin_box">
+                                    <img src="{{ site.baseurl }}/static/img/pluggy.png"/>
+                                    <h2>What is a Cordova plugin?</h2>
+                                    <p>A plugin is a bit of add-on code that provides JavaScript interface to native components.  They allow your app to use native device capabilities beyond what is available to pure web apps.</p>
+                                </div>
+                                <div className="clearfix"></div>
                             </div>
-                            <div className="clearfix"></div>
-                        </div>
                             <div className="plugins_links">
-                                    <ul className="nav nav-justified">
+                                <ul className="nav nav-justified">
                                     <li><a href="{{ site.baseurl }}/docs/en//{{ site.default_linked_docs_version }}/guide/hybrid/plugins/index.html#publishing-plugins"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
                                     <li><a href="{{ site.baseurl }}/plugins/faq.html"><span className="glyphicon glyphicon-question-sign"></span><i>&nbsp;</i>Plugin Help</a></li>
-                                    </ul>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -507,29 +501,27 @@ var App = createClass({
     }
 });
 
-App.start = function() {
+App.start = function () {
     Preact.render(<App />, document.getElementById('pluginsAppContainer'));
 };
 
-function delay(callback, ms){
-    clearTimeout (timer);
+function delay (callback, ms) {
+    clearTimeout(timer);
     timer = setTimeout(callback, ms);
 }
 
-function xhrRequest(url, success, fail) {
+function xhrRequest (url, success, fail) {
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == XMLHttpRequest.DONE ) {
-            if(xhr.status == 200){
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.status == 200) {
                 success(JSON.parse(xhr.responseText));
-                return;
             } else {
                 fail();
-                return;
             }
         }
-    }.bind(this)
-    xhr.open("GET", url, true);
+    };
+    xhr.open('GET', url, true);
     xhr.send();
 }
 

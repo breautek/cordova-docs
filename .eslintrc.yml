@@ -16,3 +16,6 @@
 # under the License.
 
 extends: '@cordova/eslint-config/node'
+
+globals:
+  - ga
