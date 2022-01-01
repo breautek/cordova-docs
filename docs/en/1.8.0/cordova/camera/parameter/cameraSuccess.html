@@ -1376,24 +1376,28 @@
                 <h1>cameraSuccess</h1>
 
 <p>onSuccess callback function that provides the image data.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">function(imageData) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function(imageData) {
     // Do something with the image
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Parameters</h2>
 
 <ul>
-<li><strong>imageData:</strong> Base64 encoding of the image data, OR the image file URI, depending on <code>[cameraOptions](cameraOptions.html)</code> used. (<code>String</code>)</li>
+  <li><strong>imageData:</strong> Base64 encoding of the image data, OR the image file URI, depending on <code>[cameraOptions](cameraOptions.html)</code> used. (<code>String</code>)</li>
 </ul>
 
 <h2><a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// Show image
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Show image
 //
 function cameraCallback(imageData) {
     var image = document.getElementById('myImage');
     image.src = "data:image/jpeg;base64," + imageData;
 }
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>
@@ -1426,7 +1430,7 @@ function cameraCallback(imageData) {
                 <h2>Development</h2>
                 <ul class="nav">
                     <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
-                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
                     <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
                     <li><a href="/contact">Mailing List</a></li>
                     <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
@@ -1463,7 +1467,7 @@ function cameraCallback(imageData) {
     </div>
 </div>
 <p class="copyright_text">
-    Copyright &copy; 2021 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Copyright &copy; 2022 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
     Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
     <br/>
     "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.

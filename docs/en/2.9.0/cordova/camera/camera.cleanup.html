@@ -1617,8 +1617,10 @@
 
 <p>Removes intermediate photos taken by the camera from temporary
 storage.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.camera.cleanup( cameraSuccess, cameraError );
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.camera.cleanup( cameraSuccess, cameraError );
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>Removes intermediate image files that are kept in temporary storage
@@ -1629,11 +1631,12 @@ after calling <code>[camera.getPicture](camera.getPicture.html)</code>. Applies 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>iOS</li>
+  <li>iOS</li>
 </ul>
 
 <h2><a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.camera.cleanup(onSuccess, onFail);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.camera.cleanup(onSuccess, onFail);
 
 function onSuccess() {
     console.log("Camera cleanup success.")
@@ -1642,7 +1645,8 @@ function onSuccess() {
 function onFail(message) {
     alert('Failed because: ' + message);
 }
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>
@@ -1675,7 +1679,7 @@ function onFail(message) {
                 <h2>Development</h2>
                 <ul class="nav">
                     <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
-                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
                     <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
                     <li><a href="/contact">Mailing List</a></li>
                     <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
@@ -1712,7 +1716,7 @@ function onFail(message) {
     </div>
 </div>
 <p class="copyright_text">
-    Copyright &copy; 2021 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Copyright &copy; 2022 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
     Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
     <br/>
     "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
