@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for Cordova Media Plugin (5.0.4)!  cordova-plugin-media@5.0.4To upgrade:cordova plugin remove c...">
+    <meta name="description" content="Deprecation of the Cordova OSX PlatformWe are hereby announcing the deprecation of cordova-osx.This means that the Cordova development community will not be ...">
 
     <title>
         
             
-                Media Plugin 5.0.4 Released! - Apache Cordova
+                Deprecation of the Cordova OSX Platform - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2022/01/25/media-plugin-5.0.4-release.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/03/22/osx-deprecation.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,72 +121,26 @@
 
 <div class="post">
     <header>
-        <div class="title">Media Plugin 5.0.4 Released!</div>
+        <div class="title">Deprecation of the Cordova OSX Platform</div>
         <div class="author">By:
             
-              Bryan Ellis
+              <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
             
         </div>
-        <div class="date">25 Jan 2022</div>
+        <div class="date">22 Mar 2022</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update for <code>Cordova Media Plugin (5.0.4)</code>!</p>
+            <h2>Deprecation of the Cordova OSX Platform</h2>
 
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@5.0.4</a></li>
-</ul>
+<p>We are hereby announcing the deprecation of <a href="https://github.com/apache/cordova-osx#readme">cordova-osx</a>.</p>
 
-<p><strong>To upgrade:</strong></p>
+<p>This means that the Cordova development community will not be doing any more work on this platform. Please migrate to the <code>cordova-electron</code> platform or try Mac Catalyst with the <code>cordova-ios</code> platform.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media
-cordova plugin add cordova-plugin-media@5.0.4
-</code></pre></div></div>
+<p>The usage and activity around the osx platform have been quite low for a long time. Cordova&#39;s other solutions for building apps for macOS are actively maintained and especially cordova-ios offers better plugin support.</p>
 
-<h2>Release Highlights</h2>
+<p>Your feedback is graciously accepted and appreciated!</p>
 
-<ul>
-  <li>
-    <p>Resolved Mounted Storage for <strong>Android 11</strong></p>
-
-    <p>Android 11 had deprecated the <code>Environment.getExternalStorageDirectory()</code> API that caused issues with fetching and mounting to the external directory. In this release, we changed the API with <code>context.getExternalFilesDir(null)</code>, the alternative suggested API for fetching and mounting with the external storage directory.</p>
-  </li>
-</ul>
-
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
-
-<!--more-->
-<h1>Changes include:</h1>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/317">GH-317</a> fix(android): get external files directory for <strong>Android</strong> 10+</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/249">GH-249</a> fix: #248 delete javascript reference to released media</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/241">GH-241</a> fix(types): Add type definition for getCurrentAmplitude</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/283">GH-283</a> refactor(eslint): use <code>cordova-eslint</code> /w fix</li>
-</ul>
-
-<p><strong>Chores &amp; Deps:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/329">GH-329</a> dep: bump <code>@cordova/eslint-config@4.0.0</code> w/ fix &amp; <code>package-lock</code> rebuild</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/284">GH-284</a> chore: adds <code>package-lock</code> file</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/282">GH-282</a> chore(npm): use short notation in <code>package.json</code></li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/275">GH-275</a> chore(npm): improve ignore list</li>
-</ul>
-
-<p><strong>CI &amp; Tests:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/320">GH-320</a> ci(ios): update workflow w/ <strong>iOS</strong> 15</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/313">GH-313</a> ci: add action-badge</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/312">GH-312</a> ci: remove travis &amp; appveyor</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/311">GH-311</a> ci: add gh-actions workflows</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/298">GH-298</a> ci: add node-14.x to workflow</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/292">GH-292</a> ci(travis): update osx xcode image</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/291">GH-291</a> ci(travis): updates <strong>Android</strong> API level</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/274">GH-274</a> ci: updates Node.js versions</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/318">GH-318</a> test(browser): disable test cases w/ play() due to Chrome&#39;s Autoplay Policy</li>
-</ul>
 
         </div>
     </section>
@@ -194,23 +148,23 @@ cordova plugin add cordova-plugin-media@5.0.4
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2021/12/21/cordova-cli-11.0.0-release.html">Previous</a>
+                    <a href="/announcements/2022/03/09/osx-release-7.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2021/12/21/cordova-cli-11.0.0-release.html">Cordova CLI 11.0.0 Released!</a>
-                    <div class="date"> 21 Dec 2021 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2022/03/09/osx-release-7.0.0.html">Cordova OSX 7.0.0 released and deprecation notice</a>
+                    <div class="date"> 09 Mar 2022 - By Niklas Merz </div>
                     <p class="content">
-                        We are happy to announce that we have just released a major...
+                        We are happy to announce that we have just released Cordova OSX...
                     </p>
                 
             </div>
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/03/09/osx-release-7.0.0.html">Next</a>
+                    <a href="/news/2022/04/06/splashscreen-plugin-release.html">Next</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2022/03/09/osx-release-7.0.0.html">Cordova OSX 7.0.0 released and deprecation notice</a>
-                    <div class="date"> 09 Mar 2022 - By Niklas Merz </div>
+                    <a class="title" href="/news/2022/04/06/splashscreen-plugin-release.html">Splash Screen Plugin Released!</a>
+                    <div class="date"> 06 Apr 2022 - By Niklas Merz </div>
                     <p class="content">
                         <!--
                             NOTE:
@@ -223,7 +177,7 @@ cordova plugin add cordova-plugin-media@5.0.4
 
                             Reference: https://github.com/jekyll/jekyll/issues/2860
                         -->
-                        We are happy to announce that we have just released Cordova OSX...
+                        We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
