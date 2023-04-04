@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-media!  cordova-plugin-media@6.1.0To upgrade:cordova plugin remove cordova-p...">
+    <meta name="description" content="We are happy to announce that cordova-common@5.0.0 has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova toolin...">
 
     <title>
         
             
-                Media Plugin 6.1.0 Released! - Apache Cordova
+                Cordova Common 5.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2022/09/09/media-plugin-6.1.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/03/09/cordova-common-release-5.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,44 +129,48 @@
 
 <div class="post">
     <header>
-        <div class="title">Media Plugin 6.1.0 Released!</div>
+        <div class="title">Cordova Common 5.0.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">09 Sep 2022</div>
+        <div class="date">09 Mar 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-media</code>!</p>
-
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@6.1.0</a></li>
-</ul>
-
-<p><strong>To upgrade:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media
-cordova plugin add cordova-plugin-media@6.1.0
-</code></pre></div></div>
+            <p>We are happy to announce that <code>cordova-common@5.0.0</code> has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like <code>config.xml</code> parsing.</p>
 
 <h2>Release Highlights</h2>
 
-<p>For Android, we updated the media error response object to include the &quot;message&quot; property. This property will provide additional information about the error. It also syncs in line with the media error response object that iOS returns.</p>
+<p>The most notable changes in this major release are:</p>
 
-<p>For iOS, file scheme support has been implemented. Two fixes were applied to prevent crashes that occured when fetching the position while the time was not defined and to ensured that the category was defined after the recording was released.</p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-common/pull/186">GH-186</a> feat!: bump package requirement <code>node&gt;=16</code></li>
+</ul>
 
-<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+<p>As Node.js 14 nears the end-of-life (April 2023), we have bumped the minimum requirement to 16.0.0. This update has also increased the minimum npm requirement to 7.10.0.</p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-common/pull/197">GH-197</a> feat(android): added <code>monochrome</code> attribute</li>
+</ul>
+
+<p>In preparation for Cordova-Android&#39;s next major release, supporting logic for Android&#39;s monochrome icons has been included.</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/357">GH-357</a> feat(android): add &#39;<code>message</code>&#39; field to media error <a href="https://issues.apache.org/jira/browse/CB-11641">CB-11641</a></li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/352">GH-352</a> feat(ios): support <code>file</code> scheme</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/354">GH-354</a> fix(ios): Reset default audio session category when release (<a href="https://issues.apache.org/jira/browse/CB-13243">CB-13243</a>)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/353">GH-353</a> fix(ios): error on <code>getPosition</code> when time is <code>nan</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/186">GH-186</a> feat!: bump package requirement node&gt;=16</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/197">GH-197</a> feat(android): added monochrome attribute</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/99">GH-99</a> chore: drop q where possible</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/198">GH-198</a> test: Removed obsolete test</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/196">GH-196</a> dep: bump @cordova/eslint-config@^5.0.0</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/192">GH-192</a> dep!: bump all available packages</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/193">GH-193</a> refactor: replace underscore w/ lodash module pkgs</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/194">GH-194</a> refactor: renamed variable</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/188">GH-188</a> ci(actions): test w/ node 14, 16, 18</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/187">GH-187</a> ci(actions): update workflow</li>
 </ul>
 
         </div>
@@ -175,37 +179,17 @@ cordova plugin add cordova-plugin-media@6.1.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Previous</a>
+                    <a href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Cordova Android 11.0.0 Released!</a>
-                    <div class="date"> 12 Jul 2022 - By Bryan Ellis </div>
+                    <a class="title" href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Screen Orientation Plugin 3.0.3 Released!</a>
+                    <div class="date"> 24 Feb 2023 - By Niklas Merz </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova Android...
+                        We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Cordova Common 4.1.0 Released!</a>
-                    <div class="date"> 15 Nov 2022 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that cordova-common@4.1.0 has been released. This is...
-                    </p>
                 
             </div>
         </div>

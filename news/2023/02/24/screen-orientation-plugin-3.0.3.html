@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-media!  cordova-plugin-media@6.1.0To upgrade:cordova plugin remove cordova-p...">
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-screen-orientation!  cordova-plugin-screen-orientation@3.0.3To upgrade:cordo...">
 
     <title>
         
             
-                Media Plugin 6.1.0 Released! - Apache Cordova
+                Screen Orientation Plugin 3.0.3 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2022/09/09/media-plugin-6.1.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/news/2023/02/24/screen-orientation-plugin-3.0.3.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,44 +129,58 @@
 
 <div class="post">
     <header>
-        <div class="title">Media Plugin 6.1.0 Released!</div>
+        <div class="title">Screen Orientation Plugin 3.0.3 Released!</div>
         <div class="author">By:
             
-              Bryan Ellis
+              <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
             
         </div>
-        <div class="date">09 Sep 2022</div>
+        <div class="date">24 Feb 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-media</code>!</p>
+            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-screen-orientation</code>!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@6.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-screen-orientation">cordova-plugin-screen-orientation@3.0.3</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media
-cordova plugin add cordova-plugin-media@6.1.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-screen-orientation
+cordova plugin add cordova-plugin-screen-orientation@3.0.3
 </code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<p>For Android, we updated the media error response object to include the &quot;message&quot; property. This property will provide additional information about the error. It also syncs in line with the media error response object that iOS returns.</p>
+<p>This release improves compatibility with newer iOS versions (see (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/107">#107</a>)) and contains miscellaneous version updates.</p>
 
-<p>For iOS, file scheme support has been implemented. Two fixes were applied to prevent crashes that occured when fetching the position while the time was not defined and to ensured that the category was defined after the recording was released.</p>
-
-<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+<p>Please report any issues you find by following this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/357">GH-357</a> feat(android): add &#39;<code>message</code>&#39; field to media error <a href="https://issues.apache.org/jira/browse/CB-11641">CB-11641</a></li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/352">GH-352</a> feat(ios): support <code>file</code> scheme</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/354">GH-354</a> fix(ios): Reset default audio session category when release (<a href="https://issues.apache.org/jira/browse/CB-13243">CB-13243</a>)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/353">GH-353</a> fix(ios): error on <code>getPosition</code> when time is <code>nan</code></li>
+  <li>build(deps): bump json5 from 1.0.1 to 1.0.2 (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/110">#110</a>)</li>
+  <li>feat(ios): add support for <strong>iOS</strong> 16 (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/107">#107</a>)</li>
+  <li>fix(chrome): lock test (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/105">#105</a>)</li>
+  <li>chore: add .npmrc file to ensure the official NPM registry is used for package installations. (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/103">#103</a>)</li>
+  <li>chore: package-lock update (#104)</li>
+  <li>ci: sync workflow with paramedic (#101)</li>
+  <li>chore(npm): bump package-lock v2 w/ rebuild (#99)</li>
+  <li>ci(android): update java requirement for <code>cordova-android</code>@11 (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/92">#92</a>)</li>
+  <li>ci(ios): update workflow w/ <strong>iOS</strong> 15 (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/88">#88</a>)</li>
+  <li>ci: add action-badge (#87)</li>
+  <li>ci: remove travis &amp; appveyor (#86)</li>
+  <li>ci: add gh-actions workflows (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/84">#84</a>)</li>
+  <li>ci: add node-14.x to workflow (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/76">#76</a>)</li>
+  <li>fix: resolveOrientation function not working correctly (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/77">#77</a>)</li>
+  <li>chore: adds package-lock file (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/67">#67</a>)</li>
+  <li>refactor(eslint): use cordova-eslint /w fix (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/66">#66</a>)</li>
+  <li>chore(npm): use short notation in <code>package.json</code> (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/64">#64</a>)</li>
+  <li>chore: removes old demo project. closes #52 (#65)</li>
+  <li>chore(asf): update git notification settings</li>
+  <li>Update CONTRIBUTING.md</li>
 </ul>
 
         </div>
@@ -175,23 +189,23 @@ cordova plugin add cordova-plugin-media@6.1.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Previous</a>
+                    <a href="/news/2023/01/16/cordova-cli-11.1.0-release.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Cordova Android 11.0.0 Released!</a>
-                    <div class="date"> 12 Jul 2022 - By Bryan Ellis </div>
+                    <a class="title" href="/news/2023/01/16/cordova-cli-11.1.0-release.html">Cordova CLI 11.1.0 Released!</a>
+                    <div class="date"> 16 Jan 2023 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova Android...
+                        We are happy to announce that we have just released a minor...
                     </p>
                 
             </div>
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Next</a>
+                    <a href="/announcements/2023/03/09/cordova-common-release-5.0.0.html">Next</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Cordova Common 4.1.0 Released!</a>
-                    <div class="date"> 15 Nov 2022 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2023/03/09/cordova-common-release-5.0.0.html">Cordova Common 5.0.0 Released!</a>
+                    <div class="date"> 09 Mar 2023 - By Bryan Ellis </div>
                     <p class="content">
                         <!--
                             NOTE:
@@ -204,7 +218,7 @@ cordova plugin add cordova-plugin-media@6.1.0
 
                             Reference: https://github.com/jekyll/jekyll/issues/2860
                         -->
-                        We are happy to announce that cordova-common@4.1.0 has been released. This is...
+                        We are happy to announce that cordova-common@5.0.0 has been released. This is...
                     </p>
                 
             </div>
