@@ -28,8 +28,6 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
-    <!-- Algolia Search CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
 
     <!-- Fonts -->
     <!-- For attribution information, see www/attributions.html -->
@@ -106,7 +104,6 @@
                             <form class="navbar-form navbar-right" id="header-search-form" role="search">
                                 <div class="input-group">
                                     
-                                    <input id="header-search-field" type="text" placeholder="Search 'dev' docs..." class="form-control hidden-xs" autocomplete="off">
                                 </div>
                             </form>
                         </li>
@@ -2479,20 +2476,12 @@ instance, or the system browser.
     - __toolbarposition__: Set to `top` or `bottom` (default is `bottom`). Causes the toolbar to be at the top or bottom of the window.
     - __hidespinner__: Set to `yes` or `no` to change the visibility of the loading indicator (defaults to `no`).
 
-    Windows supports these additional options:
-
-    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
-    - __hardwareback__: works the same way as on Android platform.
-    - __fullscreen__: set to `yes` to create the browser control without a border around it. Please note that if __location=no__ is also specified, there will be no control presented to user to close IAB window.
-
 
 ### Supported Platforms
 
 - Android
 - Browser
 - iOS
-- OSX
-- Windows
 
 ### Example
 
@@ -2714,17 +2703,11 @@ function downloadListener(params){
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
-  <li>OSX</li>
 </ul>
 
 <h3>Browser Quirks</h3>
 
 <p><code>loadstart</code>, <code>loaderror</code>, <code>message</code> events are not fired.</p>
-
-<h3>Windows Quirks</h3>
-
-<p><code>message</code> event is not fired.</p>
 
 <h3>Quick Example</h3>
 
@@ -2769,7 +2752,6 @@ The function is passed an <code>InAppBrowserEvent</code> object.</p>
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2799,7 +2781,6 @@ ref.removeEventListener('loadstart', myCallback);
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2827,7 +2808,6 @@ ref.close();
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2855,7 +2835,6 @@ ref.show();
 <ul>
   <li>Android</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2901,7 +2880,6 @@ evaluated.</li>
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2917,10 +2895,6 @@ ref.addEventListener('loadstop', function() {
 <ul>
   <li>only <strong>code</strong> key is supported.</li>
 </ul>
-
-<h3>Windows Quirks</h3>
-
-<p>Due to <a href="https://msdn.microsoft.com/en-us/library/windows.ui.xaml.controls.webview.invokescriptasync.aspx">MSDN docs</a> the invoked script can return only string values, otherwise the parameter, passed to <strong>callback</strong> will be <code>[null]</code>.</p>
 
 <h2>InAppBrowser.insertCSS</h2>
 
@@ -2949,7 +2923,6 @@ ref.addEventListener('loadstop', function() {
 <ul>
   <li>Android</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -3172,7 +3145,7 @@ iab.open('https://url-that-fails-whitelist.com', 'random_string', 'location=no')
                         <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">License</a>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
                     </li>
                     <li>
                         <a href="/artwork">Artwork</a>
@@ -3194,6 +3167,9 @@ iab.open('https://url-that-fails-whitelist.com', 'random_string', 'location=no')
                 <ul class="nav">
                     <li>
                         <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
                     </li>
                     <li>
                         <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
@@ -3219,11 +3195,10 @@ iab.open('https://url-that-fails-whitelist.com', 'random_string', 'location=no')
             Learn More
         </a>
         <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
-        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
     </div>
 </div>
 <p class="copyright_text">
-    Copyright &copy; 2023 The Apache Software Foundation, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Copyright &copy; 2024 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
     Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
     <br/>
     <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
@@ -3241,19 +3216,5 @@ iab.open('https://url-that-fails-whitelist.com', 'random_string', 'location=no')
 
     <script defer type="text/javascript" src="/static/js/index.js"></script>
     <script defer type="text/javascript" src="/static/js/twitter.js"></script>
-    
-
-
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
-<script type="text/javascript">
-    docsearch({
-        apiKey: '0a916ab198bd93d031aa70611271e42e',
-        indexName: 'cordova',
-        inputSelector: '#header-search-field',
-        algoliaOptions: { 'facetFilters': ["version:  dev", "language: en"] }
-    });
-</script>
-
 </body>
 </html>
