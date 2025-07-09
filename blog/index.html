@@ -27,11 +27,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
-
-    <!-- Fonts -->
-    <!-- For attribution information, see www/attributions.html -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -123,6 +120,479 @@
             </span>
         </h1>
         <ul class="posts">
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Wed, 30 Apr 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/04/30/cordova-android-14.0.1.html">Cordova Android 14.0.1 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">30 Apr 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Android 14.0.1</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@14.0.1</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@14.0.1
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@14.0.1
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>Fixes</h3>
+
+<ul>
+  <li><strong>Fetching Gradle Path for Windows</strong></li>
+</ul>
+
+<p>Resolved an issue in Windows environments where projects containing spaces in their paths could not be built due to changes in how the Gradle path was fetched.</p>
+
+<ul>
+  <li><strong>Setting Gradle&#39;s java.home</strong></li>
+</ul>
+
+<p>Resolved an issue where the user-defined environment variable <code>JAVA_HOME</code> or <code>CORDOVA_JAVA_HOME</code> was not being used to set the <code>java.home</code> property for the Gradle Wrapper.</p>
+
+</p>
+                    <div><a href="/announcements/2025/04/30/cordova-android-14.0.1.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Wed, 26 Mar 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/03/26/cordova-android-14.0.0.html">Cordova Android 14.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">26 Mar 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Android 14.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@14.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@14.0.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@14.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>BREAKING CHANGES</h3>
+
+<ul>
+  <li>
+    <p><strong>Increased Target SDK</strong></p>
+
+    <p>This release has increased the target SDK to 35 (Android 15).</p>
+  </li>
+  <li>
+    <p><strong>Project Dependencies</strong></p>
+
+    <p>The following Gradle dependencies were bumpped:</p>
+
+    <ul>
+      <li>Gradle: <code>8.13</code></li>
+      <li>Android Gradle Plugin (AGP): <code>8.7.3</code></li>
+    </ul>
+
+    <p>Additionally, the following libraries have been upgraded:</p>
+
+    <ul>
+      <li>AndroidX App Compat - <code>1.7.0</code></li>
+      <li>AndroidX WebKit - <code>1.12.1</code></li>
+      <li>AndroidX SplashScreen Core - <code>1.0.1</code></li>
+      <li>Google Services Gradle Plugin - <code>4.4.2</code></li>
+    </ul>
+
+    <p>If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Preference</th>
+          <th>Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>android-minSdkVersion</code></td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td><code>android-maxSdkVersion</code></td>
+          <td><em>Not set</em></td>
+        </tr>
+        <tr>
+          <td><code>android-targetSdkVersion</code></td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td><code>android-compileSdkVersion</code></td>
+          <td><em>android-targetSdkVersion configured value</em></td>
+        </tr>
+        <tr>
+          <td><code>android-buildToolsVersion</code></td>
+          <td>35.0.0</td>
+        </tr>
+        <tr>
+          <td><code>GradleVersion</code></td>
+          <td>8.13</td>
+        </tr>
+        <tr>
+          <td><code>AndroidGradlePluginVersion</code></td>
+          <td>8.7.3</td>
+        </tr>
+        <tr>
+          <td><code>GradlePluginKotlinVersion</code></td>
+          <td>1.9.24</td>
+        </tr>
+        <tr>
+          <td><code>AndroidXAppCompatVersion</code></td>
+          <td>1.7.0</td>
+        </tr>
+        <tr>
+          <td><code>AndroidXWebKitVersion</code></td>
+          <td>1.12.1</td>
+        </tr>
+        <tr>
+          <td><code>GradlePluginGoogleServicesVersion</code></td>
+          <td>4.4.2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.</p>
+  </li>
+  <li>
+    <p><strong>Increased Android Studio Requirement</strong></p>
+
+    <p>With the increase of Android Gradle Plugin, Android Studio Ladybug is the minimum required version for building and running projects in Android Studio. This aligns with the <a href="https://developer.android.com/build/releases/gradle-plugin#android_gradle_plugin_and_android_studio_compatibility">Android Gradle plugin and Android Studio compatibility</a> documentation.</p>
+  </li>
+  <li>
+    <p><strong>Required Build Tools</strong></p>
+
+    <p>To use <code>cordova-android@14.0.0</code>, SDK Platform <code>35</code> and SDK Build Tools <code>35.0.0</code> must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in any of your projects.</p>
+
+    <p><strong>Upgrade with Command-line tools:</strong></p>
+
+    <p>The recommended way to install SDK Platform 35 and SDK Build Tools 35.0.0 is by using <code>sdkmanager</code>, which is part of Android&#39;s <a href="https://developer.android.com/tools/">Command-line tools</a> package. The command-line tools is useful as it does not require Android Studio.</p>
+
+    <p>At the time of writing, <strong>version 19</strong> of the Command-line tools was downloaded from Android Studio&#39;s SDK Manager and used. It can also be downloaded from the <a href="https://developer.android.com/studio#command-line-tools-only">Android Developers</a> website.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  sdkmanager <span class="s1">'build-tools;35.0.0'</span> <span class="s1">'platforms;android-35'</span>
+</code></pre></div>    </div>
+
+    <p>You may need to run the <code>update</code> flag first:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  sdkmanager <span class="nt">--update</span>
+</code></pre></div>    </div>
+
+    <p><strong>Upgrade with Android Studio:</strong></p>
+
+    <p>To install SDK Platform 35:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Platforms</code> tab</li>
+      <li>Check <code>Android 15.0 ("VanillaIceCream")</code> which has the <code>API Level</code> of <code>35</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2025/cordova-android-14-platform-sdk-35.png" style="width: 100%;" alt="Android SDK Platform" /></p>
+
+    <p>To install SDK Build Tools 35.0.0:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Tools</code> tab</li>
+      <li>Check <code>Show Package Details</code></li>
+      <li>Expand <code>Android SDK Build-Tools</code></li>
+      <li>Check <code>35.0.0</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2025/cordova-android-14-sdk-build-tools-3500.png" style="width: 100%;" alt="Android SDK Build Tools" /></p>
+  </li>
+  <li>
+    <p><strong>Increased Java Source &amp; Target Compatibility</strong></p>
+
+    <p>The Java Source &amp; Target Compatibility has been increased to version 11. This aligns with the default settings used when creating a blank native project.</p>
+  </li>
+  <li>
+    <p><strong>Increased Node.js Engine Requirement</strong></p>
+
+    <p>The Node.js engine requirement in this release has been increased to version 20.5.0 or later.</p>
+  </li>
+  <li>
+    <p><strong>Deprecated <code>CordovaPlugin</code>&#39;s <code>initialize</code> Method</strong></p>
+
+    <p>The <code>initialize</code> method of the <code>CordovaPlugin</code> class has been marked as deprecated and will be removed in a future release. While this method was always considered deprecated, it was not properly annotated to notify plugin developers.</p>
+
+    <p>We recommend using the <code>pluginInitialize</code> method as a replacement for <code>initialize</code>.</p>
+  </li>
+  <li>
+    <p><strong>Replaced Library <code>kotlin-stdlib-jdk*</code> with <code>kotlin-stdlib</code></strong></p>
+
+    <p>The <code>kotlin-stdlib-jdk*</code> libraries have been replaced with <code>kotlin-stdlib</code>. Both <code>kotlin-stdlib-jdk7</code> and <code>kotlin-stdlib-jdk8</code> are merged into <code>kotlin-stdlib</code>.</p>
+  </li>
+</ul>
+
+<h3>Feature</h3>
+
+<ul>
+  <li>
+    <p><strong>Added <code>AndroidEdgeToEdge</code> Preference Support</strong></p>
+
+    <p>By default, Android 15 enforces the Edge-to-Edge feature, which may affect some Apache Cordova apps.</p>
+
+    <p>In this major release, Apache Cordova has opted out of the Edge-to-Edge feature to retain the original behavior and allow app developers ample time to make the necessary adjustments to support Edge-to-Edge.</p>
+
+    <p>Users can re-enable the Edge-to-Edge feature using this new preference flag.</p>
+
+    <p>It is expected that in Android&#39;s next major release, opting out of Edge-to-Edge will no longer be possible.</p>
+
+    <p>Apache Cordova will continue to prepare for this expected future behavior change.</p>
+  </li>
+</ul>
+
+</p>
+                    <div><a href="/announcements/2025/03/26/cordova-android-14.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Wed, 26 Feb 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html">Media Capture Plugin 6.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">26 Feb 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-media-capture</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media-capture/v/6.0.0">cordova-plugin-media-capture@6.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@6.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>This major release primarily focused on <strong>ensuring</strong> that the plugin complies with Android&#39;s new strict permission requirements.</p>
+
+<p>Specifically, it <strong>removes</strong> unnecessary permissions such as:</p>
+
+<ul>
+  <li><code>android.permission.READ_EXTERNAL_STORAGE</code></li>
+  <li><code>android.permission.WRITE_EXTERNAL_STORAGE</code></li>
+  <li><code>android.permission.RECORD_AUDIO</code></li>
+</ul>
+
+<p>Additionally, it <strong>removes</strong> broad media permissions:</p>
+
+<ul>
+  <li><code>android.permission.READ_MEDIA_AUDIO</code></li>
+  <li><code>android.permission.READ_MEDIA_IMAGES</code></li>
+  <li><code>android.permission.READ_MEDIA_VIDEO</code></li>
+</ul>
+
+<p>Please report any issues you find by following the <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+</p>
+                    <div><a href="/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Sun, 02 Feb 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/02/02/cordova-common-5.0.1.html">Cordova Common 5.0.1 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">02 Feb 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that <code>cordova-common@5.0.1</code> has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like <code>config.xml</code> parsing.</p>
+
+<h2>Release Highlights</h2>
+
+<p>The most notable changes in this patch release were updates to the dependencies used by this tool. Some dependencies were replaced with Node internals, reducing the overall dependency requirements.</p>
+
+</p>
+                    <div><a href="/announcements/2025/02/02/cordova-common-5.0.1.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Fri, 31 Jan 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/01/31/meetup-1-recording.html">Cordova 2024 recap and plans for 2025 - Meetup recording</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">31 Jan 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We kicked off 2025 with a very successful virtual meetup! Thank you to everyone who attended, and a huge thanks to Bryan Ellis (@erisu) for preparing and hosting the meeting. We had over 100 registrations and more than 60 attendees.</p>
+
+<p>The recording is available on <a href="https://www.youtube.com/watch?v=mxZsVWJ8AT8">YouTube</a>, and you can find the slides <a href="https://www.erisu.dev/slides/cordova-meetup-2025/">here</a>.</p>
+
+<p>Bryan provided a recap of 2024, summarizing Cordova releases and milestones, and shared some plans for the current year. As always, we can&#39;t provide exact timelines since our work is entirely volunteer-driven. However, if you’d like to help us achieve our goals, you can start contributing at any time!</p>
+
+<p>We also have plans for additional meetups to make contributing even more accessible. Stay tuned for more details!</p>
+
+</p>
+                    <div><a href="/announcements/2025/01/31/meetup-1-recording.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Wed, 08 Jan 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/01/08/meetup-1.html">Cordova needs you in 2025! Let's start with a meetup</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">08 Jan 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>The beginning of a new year is always a good opportunity for a project to reflect on the past year and make plans for the one ahead. As we wrapped up 2024, we had an idea that we’re excited to share: hosting another community meetup for Cordova.</p>
+
+<p>This meetup will be an excellent chance to recap the recent releases and highlight some upcoming tasks. 2024 saw some promising contributions from new developers, and we’ve noticed growing interest in our project. This makes the meetup the perfect time to onboard new contributors and strengthen our community.</p>
+
+<p>Without more committers, it will become increasingly challenging to maintain a steady release cycle and address the needs of our users. By bringing together experienced contributors and newcomers, we aim to foster collaboration and make future releases smoother. The release process is vital but can often feel overwhelming within the ASF framework. To address this, we are exploring ways to simplify it and provide clearer guidance to our community, making participation more accessible for everyone. <strong>Stay tuned!</strong></p>
+
+<h1>Joining the Meetup</h1>
+
+<p>The meetup will be held virtually on Jitsi for participants worldwide. After signing up on our <strong><a href="https://lu.ma/zdsnddl2">meetup page</a></strong>, you’ll receive detailed instructions on how to join. Whether you’re a seasoned contributor or just starting to explore Cordova, we encourage you to participate.</p>
+
+<p>Let’s kick off 2025 with a strong sense of community and a shared vision for Cordova’s future. We’re looking forward to seeing you there!</p>
+
+<h1>Agenda</h1>
+
+</p>
+                    <div><a href="/announcements/2025/01/08/meetup-1.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Wed, 20 Nov 2024 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2024/11/20/cordova-plugin-file-8.1.3.html">File Plugin 8.1.3 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">20 Nov 2024</span>
+                        - by
+                        <span class="author">
+                            
+                                <a href="https://breautek.com">Norman Breau</a>
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-file</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@8.1.3</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@8.1.3
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>This patch fixes an issue with <code>FileEntry.toURL()</code> on iOS devices when the app 
+is hosted through schemes. The intent for this API is to produce a URL that
+can be used in the DOM, like image tags for example. However, iOS devices always
+produced <code>file://</code> URIs which is not usable when the webview is configured to
+use schemes.</p>
+
+<p>Starting with 8.1.3, <code>FileEntry.toURL()</code> will produce an app-scheme URI if the
+iOS webview is configured to use app schemes, or a <code>file://</code> uri otherwise.</p>
+
+<p>This brings the behaviour closer to Android&#39;s implementation.</p>
+
+<p>Please report any issues you find by following the <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+</p>
+                    <div><a href="/announcements/2024/11/20/cordova-plugin-file-8.1.3.html">More...</a></div>
+                </section>
+            </li>
             
             <li>
                 <header>
@@ -14281,7 +14751,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Sat, 02 Nov 2024 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Wed, 30 Apr 2025 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
@@ -14361,7 +14831,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
     </div>
 </div>
 <p class="copyright_text">
-    Copyright &copy; 2024 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
     Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
     <br/>
     <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>

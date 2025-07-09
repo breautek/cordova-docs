@@ -6,9 +6,650 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Nov 2024 15:19:39 +0000</pubDate>
-    <lastBuildDate>Wed, 20 Nov 2024 15:19:39 +0000</lastBuildDate>
-    <generator>Jekyll v4.3.4</generator>
+    <pubDate>Wed, 09 Jul 2025 01:22:48 +0000</pubDate>
+    <lastBuildDate>Wed, 09 Jul 2025 01:22:48 +0000</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Android 14.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 14.0.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@14.0.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
+cordova platform add android@14.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@14.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Fetching Gradle Path for Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Resolved an issue in Windows environments where projects containing spaces in their paths could not be built due to changes in how the Gradle path was fetched.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Setting Gradle&amp;#39;s java.home&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Resolved an issue where the user-defined environment variable &lt;code&gt;JAVA_HOME&lt;/code&gt; or &lt;code&gt;CORDOVA_JAVA_HOME&lt;/code&gt; was not being used to set the &lt;code&gt;java.home&lt;/code&gt; property for the Gradle Wrapper.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1795&quot;&gt;GH-1795&lt;/a&gt; fix: configure gradle &lt;code&gt;java.home&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1793&quot;&gt;GH-1793&lt;/a&gt; fix(windows): get gradle path with &lt;code&gt;which&lt;/code&gt; command&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/04/30/cordova-android-14.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/04/30/cordova-android-14.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Android 14.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 14.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@14.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
+cordova platform add android@14.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@14.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;BREAKING CHANGES&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Target SDK&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This release has increased the target SDK to 35 (Android 15).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Project Dependencies&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The following Gradle dependencies were bumpped:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Gradle: &lt;code&gt;8.13&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Android Gradle Plugin (AGP): &lt;code&gt;8.7.3&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Additionally, the following libraries have been upgraded:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;AndroidX App Compat - &lt;code&gt;1.7.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;AndroidX WebKit - &lt;code&gt;1.12.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;AndroidX SplashScreen Core - &lt;code&gt;1.0.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Google Services Gradle Plugin - &lt;code&gt;4.4.2&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:&lt;/p&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Preference&lt;/th&gt;
+          &lt;th&gt;Default Value&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-minSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;24&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-maxSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;Not set&lt;/em&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-targetSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;35&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-compileSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;android-targetSdkVersion configured value&lt;/em&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-buildToolsVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;35.0.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;GradleVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;8.13&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AndroidGradlePluginVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;8.7.3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;GradlePluginKotlinVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;1.9.24&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AndroidXAppCompatVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;1.7.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AndroidXWebKitVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;1.12.1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;GradlePluginGoogleServicesVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;4.4.2&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;p&gt;Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Android Studio Requirement&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;With the increase of Android Gradle Plugin, Android Studio Ladybug is the minimum required version for building and running projects in Android Studio. This aligns with the &lt;a href=&quot;https://developer.android.com/build/releases/gradle-plugin#android_gradle_plugin_and_android_studio_compatibility&quot;&gt;Android Gradle plugin and Android Studio compatibility&lt;/a&gt; documentation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Required Build Tools&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;To use &lt;code&gt;cordova-android@14.0.0&lt;/code&gt;, SDK Platform &lt;code&gt;35&lt;/code&gt; and SDK Build Tools &lt;code&gt;35.0.0&lt;/code&gt; must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in any of your projects.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Upgrade with Command-line tools:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The recommended way to install SDK Platform 35 and SDK Build Tools 35.0.0 is by using &lt;code&gt;sdkmanager&lt;/code&gt;, which is part of Android&amp;#39;s &lt;a href=&quot;https://developer.android.com/tools/&quot;&gt;Command-line tools&lt;/a&gt; package. The command-line tools is useful as it does not require Android Studio.&lt;/p&gt;
+
+    &lt;p&gt;At the time of writing, &lt;strong&gt;version 19&lt;/strong&gt; of the Command-line tools was downloaded from Android Studio&amp;#39;s SDK Manager and used. It can also be downloaded from the &lt;a href=&quot;https://developer.android.com/studio#command-line-tools-only&quot;&gt;Android Developers&lt;/a&gt; website.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sdkmanager &lt;span class=&quot;s1&quot;&gt;'build-tools;35.0.0'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'platforms;android-35'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;You may need to run the &lt;code&gt;update&lt;/code&gt; flag first:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sdkmanager &lt;span class=&quot;nt&quot;&gt;--update&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;strong&gt;Upgrade with Android Studio:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;To install SDK Platform 35:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
+      &lt;li&gt;Click on &lt;code&gt;SDK Platforms&lt;/code&gt; tab&lt;/li&gt;
+      &lt;li&gt;Check &lt;code&gt;Android 15.0 (&quot;VanillaIceCream&quot;)&lt;/code&gt; which has the &lt;code&gt;API Level&lt;/code&gt; of &lt;code&gt;35&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2025/cordova-android-14-platform-sdk-35.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Platform&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;To install SDK Build Tools 35.0.0:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
+      &lt;li&gt;Click on &lt;code&gt;SDK Tools&lt;/code&gt; tab&lt;/li&gt;
+      &lt;li&gt;Check &lt;code&gt;Show Package Details&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Expand &lt;code&gt;Android SDK Build-Tools&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Check &lt;code&gt;35.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2025/cordova-android-14-sdk-build-tools-3500.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Build Tools&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Java Source &amp;amp; Target Compatibility&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The Java Source &amp;amp; Target Compatibility has been increased to version 11. This aligns with the default settings used when creating a blank native project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Node.js Engine Requirement&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The Node.js engine requirement in this release has been increased to version 20.5.0 or later.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Deprecated &lt;code&gt;CordovaPlugin&lt;/code&gt;&amp;#39;s &lt;code&gt;initialize&lt;/code&gt; Method&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The &lt;code&gt;initialize&lt;/code&gt; method of the &lt;code&gt;CordovaPlugin&lt;/code&gt; class has been marked as deprecated and will be removed in a future release. While this method was always considered deprecated, it was not properly annotated to notify plugin developers.&lt;/p&gt;
+
+    &lt;p&gt;We recommend using the &lt;code&gt;pluginInitialize&lt;/code&gt; method as a replacement for &lt;code&gt;initialize&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Replaced Library &lt;code&gt;kotlin-stdlib-jdk*&lt;/code&gt; with &lt;code&gt;kotlin-stdlib&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The &lt;code&gt;kotlin-stdlib-jdk*&lt;/code&gt; libraries have been replaced with &lt;code&gt;kotlin-stdlib&lt;/code&gt;. Both &lt;code&gt;kotlin-stdlib-jdk7&lt;/code&gt; and &lt;code&gt;kotlin-stdlib-jdk8&lt;/code&gt; are merged into &lt;code&gt;kotlin-stdlib&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Feature&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Added &lt;code&gt;AndroidEdgeToEdge&lt;/code&gt; Preference Support&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;By default, Android 15 enforces the Edge-to-Edge feature, which may affect some Apache Cordova apps.&lt;/p&gt;
+
+    &lt;p&gt;In this major release, Apache Cordova has opted out of the Edge-to-Edge feature to retain the original behavior and allow app developers ample time to make the necessary adjustments to support Edge-to-Edge.&lt;/p&gt;
+
+    &lt;p&gt;Users can re-enable the Edge-to-Edge feature using this new preference flag.&lt;/p&gt;
+
+    &lt;p&gt;It is expected that in Android&amp;#39;s next major release, opting out of Edge-to-Edge will no longer be possible.&lt;/p&gt;
+
+    &lt;p&gt;Apache Cordova will continue to prepare for this expected future behavior change.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1788&quot;&gt;GH-1788&lt;/a&gt; dep!: bump npm packages
+    &lt;ul&gt;
+      &lt;li&gt;nyc@17.1.0&lt;/li&gt;
+      &lt;li&gt;which@5.0.0&lt;/li&gt;
+      &lt;li&gt;semver@7.7.1&lt;/li&gt;
+      &lt;li&gt;jasmine@5.6.0&lt;/li&gt;
+      &lt;li&gt;android-versions@2.1.0&lt;/li&gt;
+      &lt;li&gt;cordova-common@5.0.1&lt;/li&gt;
+      &lt;li&gt;fast-glob@3.3.3&lt;/li&gt;
+      &lt;li&gt;nopt@8.1.0&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1789&quot;&gt;GH-1789&lt;/a&gt; feat!: bump node engine requirement &lt;code&gt;&amp;gt;=20.5.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1784&quot;&gt;GH-1784&lt;/a&gt; feat!: bump java default targets to 11&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1771&quot;&gt;GH-1771&lt;/a&gt; feat!: deprecate CordovaPlugin&amp;#39;s method initialize&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1767&quot;&gt;GH-1767&lt;/a&gt; feat!: use kotlin-stdlib instead of kotlin-stdlib-jdk*&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1763&quot;&gt;GH-1763&lt;/a&gt; feat!: SDK 35 Support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1785&quot;&gt;GH-1785&lt;/a&gt; feat: bump gradle to 8.13&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1779&quot;&gt;GH-1779&lt;/a&gt; feat: add &lt;code&gt;AndroidEdgeToEdge&lt;/code&gt; preference &amp;amp; theme flag&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1778&quot;&gt;GH-1778&lt;/a&gt; feat: Account for Node security patch&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1768&quot;&gt;GH-1768&lt;/a&gt; feat: &lt;code&gt;androidx.core:core-splashscreen@1.0.1&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1766&quot;&gt;GH-1766&lt;/a&gt; feat: &lt;code&gt;com.google.gms:google-services@4.4.2&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1765&quot;&gt;GH-1765&lt;/a&gt; feat: &lt;code&gt;androidx.webkit:webkit@1.12.1&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1764&quot;&gt;GH-1764&lt;/a&gt; feat: &lt;code&gt;androidx.appcompat:appcompat@1.7.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1790&quot;&gt;GH-1790&lt;/a&gt; fix: replace fs-extra.ensureFileSync with fs.writeFileSync&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1781&quot;&gt;GH-1781&lt;/a&gt; fix: copy gradle wrapper from tools to platform root dir&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1770&quot;&gt;GH-1770&lt;/a&gt; fix: creation of cdv-gradle-config.json w/ --link flag&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1739&quot;&gt;GH-1739&lt;/a&gt; fix(docs): Incorrect JDK requirement stated in README&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1718&quot;&gt;GH-1718&lt;/a&gt; fix: app restart when BT keyboard is connected in some devices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores &amp;amp; Refactoring:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1786&quot;&gt;GH-1786&lt;/a&gt; chore: add AndroidX build test to gitignore&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1774&quot;&gt;GH-1774&lt;/a&gt; style: update &amp;amp; resolve doc block warnings&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1772&quot;&gt;GH-1772&lt;/a&gt; refactor: replace fs-extra with node:fs&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1769&quot;&gt;GH-1769&lt;/a&gt; refactor: prefix node:*&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1748&quot;&gt;GH-1748&lt;/a&gt; chore(deps): bump cross-spawn from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1750&quot;&gt;GH-1750&lt;/a&gt; chore(ci): Fix dependabot PR failures&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1736&quot;&gt;GH-1736&lt;/a&gt; chore(deps): bump micromatch from 4.0.5 to 4.0.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1716&quot;&gt;GH-1716&lt;/a&gt; chore(deps): bump braces from 3.0.2 to 3.0.3&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/03/26/cordova-android-14.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/03/26/cordova-android-14.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Media Capture Plugin 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-media-capture&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-media-capture/v/6.0.0&quot;&gt;cordova-plugin-media-capture@6.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@6.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This major release primarily focused on &lt;strong&gt;ensuring&lt;/strong&gt; that the plugin complies with Android&amp;#39;s new strict permission requirements.&lt;/p&gt;
+
+&lt;p&gt;Specifically, it &lt;strong&gt;removes&lt;/strong&gt; unnecessary permissions such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.READ_EXTERNAL_STORAGE&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.WRITE_EXTERNAL_STORAGE&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.RECORD_AUDIO&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, it &lt;strong&gt;removes&lt;/strong&gt; broad media permissions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_AUDIO&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_IMAGES&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_VIDEO&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/308&quot;&gt;GH-308&lt;/a&gt; feat(android)!: remove unnecessary permissions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/280&quot;&gt;GH-280&lt;/a&gt; feat(android)!: remove RECORD_AUDIO permission not requested at runtime&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/295&quot;&gt;GH-295&lt;/a&gt; fix(android)!: remove broad media permissions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/281&quot;&gt;GH-281&lt;/a&gt; feat(android): Field &amp;#39;storagePermissions&amp;#39; may be &amp;#39;final&amp;#39;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/307&quot;&gt;GH-307&lt;/a&gt; fix(android): Remove usage of Media Store queries&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/302&quot;&gt;GH-302&lt;/a&gt; fix(android): save media capture to File Provider&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores, Refactoring, CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/306&quot;&gt;GH-306&lt;/a&gt; chore: upgrade eslint config and rolled dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/305&quot;&gt;GH-305&lt;/a&gt; chore: npmrc&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/284&quot;&gt;GH-284&lt;/a&gt; chore: update asf config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/309&quot;&gt;GH-309&lt;/a&gt; refactor(android): cleanup unused or obsolete code&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/304&quot;&gt;GH-304&lt;/a&gt; ci(ios): update workflow environment&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/301&quot;&gt;GH-301&lt;/a&gt; ci: sync workflow w/ paramedic&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Common 5.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@5.0.1&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this patch release were updates to the dependencies used by this tool. Some dependencies were replaced with Node internals, reducing the overall dependency requirements.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/222&quot;&gt;GH-222&lt;/a&gt; chore: bump npm dependencies to current minor revisions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/217&quot;&gt;GH-217&lt;/a&gt; chore(deps): bump cross-spawn from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/214&quot;&gt;GH-214&lt;/a&gt; chore(deps): bump micromatch from 4.0.5 to 4.0.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/211&quot;&gt;GH-211&lt;/a&gt; chore: Minor test fixes&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/210&quot;&gt;GH-210&lt;/a&gt; chore: Don&amp;#39;t list dev dependencies in NOTICE&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/208&quot;&gt;GH-208&lt;/a&gt; chore(deps): bump braces from 3.0.2 to 3.0.3&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/203&quot;&gt;GH-203&lt;/a&gt; chore(deps): Modernize some dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/204&quot;&gt;GH-204&lt;/a&gt; chore: fix typo in license checker&amp;#39;s ignored-packages config&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/218&quot;&gt;GH-218&lt;/a&gt; ci: Fix dependabot PR failures&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/207&quot;&gt;GH-207&lt;/a&gt; ci: Add NodeJS 22 to CI matrix&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/206&quot;&gt;GH-206&lt;/a&gt; ci: Set up CodeQL analysis&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/205&quot;&gt;GH-205&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/202&quot;&gt;GH-202&lt;/a&gt; ci: add release audit workflow&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/02/02/cordova-common-5.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/02/02/cordova-common-5.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova 2024 recap and plans for 2025 - Meetup recording</title>
+        <description>&lt;p&gt;We kicked off 2025 with a very successful virtual meetup! Thank you to everyone who attended, and a huge thanks to Bryan Ellis (@erisu) for preparing and hosting the meeting. We had over 100 registrations and more than 60 attendees.&lt;/p&gt;
+
+&lt;p&gt;The recording is available on &lt;a href=&quot;https://www.youtube.com/watch?v=mxZsVWJ8AT8&quot;&gt;YouTube&lt;/a&gt;, and you can find the slides &lt;a href=&quot;https://www.erisu.dev/slides/cordova-meetup-2025/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bryan provided a recap of 2024, summarizing Cordova releases and milestones, and shared some plans for the current year. As always, we can&amp;#39;t provide exact timelines since our work is entirely volunteer-driven. However, if you’d like to help us achieve our goals, you can start contributing at any time!&lt;/p&gt;
+
+&lt;p&gt;We also have plans for additional meetups to make contributing even more accessible. Stay tuned for more details!&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/01/31/meetup-1-recording.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/01/31/meetup-1-recording.html</guid>
+        
+        <category>news</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova needs you in 2025! Let's start with a meetup</title>
+        <description>&lt;p&gt;The beginning of a new year is always a good opportunity for a project to reflect on the past year and make plans for the one ahead. As we wrapped up 2024, we had an idea that we’re excited to share: hosting another community meetup for Cordova.&lt;/p&gt;
+
+&lt;p&gt;This meetup will be an excellent chance to recap the recent releases and highlight some upcoming tasks. 2024 saw some promising contributions from new developers, and we’ve noticed growing interest in our project. This makes the meetup the perfect time to onboard new contributors and strengthen our community.&lt;/p&gt;
+
+&lt;p&gt;Without more committers, it will become increasingly challenging to maintain a steady release cycle and address the needs of our users. By bringing together experienced contributors and newcomers, we aim to foster collaboration and make future releases smoother. The release process is vital but can often feel overwhelming within the ASF framework. To address this, we are exploring ways to simplify it and provide clearer guidance to our community, making participation more accessible for everyone. &lt;strong&gt;Stay tuned!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1&gt;Joining the Meetup&lt;/h1&gt;
+
+&lt;p&gt;The meetup will be held virtually on Jitsi for participants worldwide. After signing up on our &lt;strong&gt;&lt;a href=&quot;https://lu.ma/zdsnddl2&quot;&gt;meetup page&lt;/a&gt;&lt;/strong&gt;, you’ll receive detailed instructions on how to join. Whether you’re a seasoned contributor or just starting to explore Cordova, we encourage you to participate.&lt;/p&gt;
+
+&lt;p&gt;Let’s kick off 2025 with a strong sense of community and a shared vision for Cordova’s future. We’re looking forward to seeing you there!&lt;/p&gt;
+
+&lt;h1&gt;Agenda&lt;/h1&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Introduction&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Short recap of 2024&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Platform Releases
+        &lt;ul&gt;
+          &lt;li&gt;Cordova-Android&lt;/li&gt;
+          &lt;li&gt;Cordova-Electron&lt;/li&gt;
+          &lt;li&gt;Cordova-iOS&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Plugin Releases
+        &lt;ul&gt;
+          &lt;li&gt;Camera&lt;/li&gt;
+          &lt;li&gt;Device&lt;/li&gt;
+          &lt;li&gt;File&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Other Points
+        &lt;ul&gt;
+          &lt;li&gt;Cordova-Android Next Major&lt;/li&gt;
+          &lt;li&gt;Community Survey&lt;/li&gt;
+          &lt;li&gt;User Feedback of 2024&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What&amp;#39;s Next in 2025&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Platform Releases
+        &lt;ul&gt;
+          &lt;li&gt;Cordova-iOS 8&lt;/li&gt;
+          &lt;li&gt;Cordova-Android 14&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Community Release Livestream&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Other Topic Points
+        &lt;ul&gt;
+          &lt;li&gt;Google Android release timeline changes and what it means for Cordova&lt;/li&gt;
+          &lt;li&gt;User Feedback for 2025&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Community Interest &amp;amp; Feedback&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Interest in Contributing
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Why do we need more people to contribute?&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;How do you feel about the state of Cordova?&lt;/li&gt;
+      &lt;li&gt;What areas do you find needing attention?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Wrap-Up&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/01/08/meetup-1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/01/08/meetup-1.html</guid>
+        
+        <category>news</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>File Plugin 8.1.3 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@8.1.3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@8.1.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This patch fixes an issue with &lt;code&gt;FileEntry.toURL()&lt;/code&gt; on iOS devices when the app 
+is hosted through schemes. The intent for this API is to produce a URL that
+can be used in the DOM, like image tags for example. However, iOS devices always
+produced &lt;code&gt;file://&lt;/code&gt; URIs which is not usable when the webview is configured to
+use schemes.&lt;/p&gt;
+
+&lt;p&gt;Starting with 8.1.3, &lt;code&gt;FileEntry.toURL()&lt;/code&gt; will produce an app-scheme URI if the
+iOS webview is configured to use app schemes, or a &lt;code&gt;file://&lt;/code&gt; uri otherwise.&lt;/p&gt;
+
+&lt;p&gt;This brings the behaviour closer to Android&amp;#39;s implementation.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/642&quot;&gt;GH-642&lt;/a&gt; fix(ios): Entry.toURL() to produce DOM-usable uri when using scheme-hosted webview (#642)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Tests:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/643&quot;&gt;GH-643&lt;/a&gt; fix(test): file.spec.131 moveTo may fail due to read order assumption (#643)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Docs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/645&quot;&gt;GH-645&lt;/a&gt; docs: Added upgrade notes to &lt;code&gt;README&lt;/code&gt; for v8 (#645)&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2024/11/20/cordova-plugin-file-8.1.3.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/11/20/cordova-plugin-file-8.1.3.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Camera Plugin 8.0.0 Released!</title>
@@ -334,790 +975,6 @@ cordova plugin add cordova-plugin-file@8.1.2
         <category>news</category>
         
         <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>File Plugin 8.1.1 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@8.1.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
-cordova plugin add cordova-plugin-file@8.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;For Android, we corrected an issue that prevented &lt;code&gt;.toURL()&lt;/code&gt; to be used on &lt;code&gt;content://&lt;/code&gt; file entries. Now &lt;code&gt;.toURL()&lt;/code&gt; will return a DOM-usable url on both &lt;code&gt;file://&lt;/code&gt; and &lt;code&gt;content://&lt;/code&gt; file entries.&lt;/p&gt;
-
-&lt;p&gt;This will be important for upcoming releases planned for the Camera plugin.&lt;/p&gt;
-
-&lt;p&gt;Note that the &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference must be off. If &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference is turned on, then &lt;code&gt;.toURL()&lt;/code&gt; will return the underlying URL and modern Android devices will reject &lt;code&gt;content://&lt;/code&gt; file paths. If your project is still using &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; it is time to strongly consider migrating to schemes by turning the &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference off.&lt;/p&gt;
-
-&lt;p&gt;By default, the &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference is disabled. If your project does not explicitly enable it, then no action is required.&lt;/p&gt;
-
-&lt;p&gt;For iOS, there are no changes.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Edit (2024-10-28)&lt;/em&gt;: This patch introduces a regression on Android platforms when resolving &lt;code&gt;.toURL()&lt;/code&gt; on some &lt;code&gt;file://&lt;/code&gt; URIs. Please use upgrade to &lt;code&gt;cordova-plugin-file@8.1.2&lt;/code&gt; instead.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find by following the this &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/629&quot;&gt;GH-629&lt;/a&gt; fix(android): Content FS support in PathHandler (#629)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Documentation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/639&quot;&gt;GH-639&lt;/a&gt; docs: Correct onwriteend to onwrite (#639)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/638&quot;&gt;GH-628&lt;/a&gt; docs: Reformatting specs (#638)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 23 Oct 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova iOS 8.0.0 Beta1 is Now Available!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released a beta for the next Cordova iOS version. This is Cordova iOS 8.0.0-beta.1!&lt;/p&gt;
-
-&lt;p&gt;This is a developer preview of Cordova&amp;#39;s supported platforms for building iOS applications. The intention of this beta release is for plugin authors and app developers to test their plugins and projects and provide feedback and bug reports before the final release of Cordova iOS 8.0.0. This version includes several breaking API changes and project structure changes, which is why we are providing this beta release for testing purposes.&lt;/p&gt;
-
-&lt;p&gt;This beta is &lt;strong&gt;not intended to be used for production App Store submissions&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios/v/8.0.0-beta.1&quot;&gt;cordova-ios@8.0.0-beta.1&lt;/a&gt; on npm&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://archive.apache.org/dist/cordova/platforms/cordova-ios-8.0.0-beta.1.tgz&quot;&gt;cordova-ios@8.0.0-beta.1.tgz&lt;/a&gt; source code&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For plugin authors, we&amp;#39;ve written a guide about &lt;a href=&quot;https://apache.github.io/cordova-ios/documentation/cordova/upgrading-8?language=objc&quot;&gt;Upgrading Plugins to Cordova iOS 8.x&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To test an upgrade in your projects:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
-cordova platform add ios@8.0.0-beta.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install for testing:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@8.0.0-beta.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;The minimum supported versions have been increased.&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;The minimum supported &lt;strong&gt;iOS&lt;/strong&gt; version is now 13.&lt;/li&gt;
-      &lt;li&gt;The minimum supported &lt;strong&gt;Xcode&lt;/strong&gt; version is now 15.&lt;/li&gt;
-      &lt;li&gt;The minimum supported &lt;strong&gt;NodeJS&lt;/strong&gt; version is now 18.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;The platform project has been modernized with some significant changes.&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;The Xcode project, and build target are now always named &lt;code&gt;App&lt;/code&gt;.&lt;br /&gt;
-This resolves numerous issues around CocoaPods, multi-target projects, and Info.plist additions, but potentially breaks some hooks that assume the project name matches what&amp;#39;s defined in config.xml.&lt;/li&gt;
-      &lt;li&gt;The platform project now uses Swift classes and a storyboard file.&lt;/li&gt;
-      &lt;li&gt;The platform project now supports building for macOS using Catalyst.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;App Icon handling has been simplified.&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Projects can now provide a single 1024px × 1024px icon in config.xml.&lt;/li&gt;
-      &lt;li&gt;Projects building with Xcode 16 can now provide monochrome and dark mode icon variants.&lt;/li&gt;
-      &lt;li&gt;See &lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1465&quot;&gt;GH-1465&lt;/a&gt; for details.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Fixes for numerous bug reports and pain points.&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Range requests are now supported for large media files when using a custom protocol.&lt;/li&gt;
-      &lt;li&gt;Opening system alert boxes from JavaScript code should no longer freeze the application.&lt;/li&gt;
-      &lt;li&gt;Improved error messaging when no iOS simulators are installed.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Fixes for apps that use Cordova as a framework.&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Several memory leaks have been fixed when disposing of a Cordova view controller.&lt;/li&gt;
-      &lt;li&gt;Several API improvements for specifying background colours and splash screen behaviour.&lt;/li&gt;
-      &lt;li&gt;New &lt;a href=&quot;https://apache.github.io/cordova-ios/&quot;&gt;API documentation&lt;/a&gt; is published for the CordovaLib classes.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The full changelog is available to read &lt;a href=&quot;https://github.com/apache/cordova-ios/blob/8.0.0-beta.1/RELEASENOTES.md#800-beta1-oct-17-2024&quot;&gt;here&lt;/a&gt;. Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-</description>
-        <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova iOS 7.1.1 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.1.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.1.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
-cordova platform add ios@7.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;Fixes&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Properly uninstall plugins with asset tags&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Fixed issues where plugins were not uninstalling properly if the plugin had &lt;code&gt;&amp;lt;asset&amp;gt;&lt;/code&gt; tags defined in &lt;code&gt;plugin.xml&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Version warnings during plugin add&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Fixed an issue that displayed version check failure warnings when installing plugins.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Moved &lt;code&gt;CODE_SIGN_ENTITLEMENTS&lt;/code&gt; to the target settings of the application target within the Xcode project.&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1446&quot;&gt;GH-1446&lt;/a&gt; fix: uninstall plugin with &lt;code&gt;asset&lt;/code&gt; tag&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1435&quot;&gt;GH-1435&lt;/a&gt; fix: Fix version checking helper scripts&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1436&quot;&gt;GH-1436&lt;/a&gt; fix: Properly set the webview config when it is provided&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1438&quot;&gt;GH-1438&lt;/a&gt; fix: Set CodeSigning Entitlements in Xcode Project at Target level&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Others:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1426&quot;&gt;GH-1426&lt;/a&gt; chore: Update CordovaLib.xcodeproj fixture&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1419&quot;&gt;GH-1419&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/07/24/cordova-ios-7.1.1.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/07/24/cordova-ios-7.1.1.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Android 13.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 13.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@13.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
-cordova platform add android@13.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@13.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;BREAKING CHANGES&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Increased Target SDK&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;This release has increased the target SDK to 34 (Android 14).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Increased Android Studio Requirement&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Android Studio Jellyfish is required if building and running from Android Studio.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Required Build Tools&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;To use &lt;code&gt;cordova-android@13&lt;/code&gt;, SDK Platform &lt;code&gt;34&lt;/code&gt; and SDK Build Tools &lt;code&gt;34.0.0&lt;/code&gt; must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.&lt;/p&gt;
-
-    &lt;p&gt;To install SDK Platform 34:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
-      &lt;li&gt;Click on &lt;code&gt;SDK Platforms&lt;/code&gt; tab&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;Android 14.0 (&quot;UpsideDownCake&quot;)&lt;/code&gt; which has the &lt;code&gt;API Level&lt;/code&gt; of &lt;code&gt;34&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/cordova-android-13-platform-sdk-34.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Platform&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;To install SDK Build Tools 34.0.0:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
-      &lt;li&gt;Click on &lt;code&gt;SDK Tools&lt;/code&gt; tab&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;Show Package Details&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Expand &lt;code&gt;Android SDK Build-Tools&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;34.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/cordova-android-13-sdk-build-tools-3400.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Build Tools&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Project Dependencies&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;The following project dependencies were bumpped:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Kotlin: &lt;code&gt;1.9.24&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Gradle: &lt;code&gt;8.7&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Android Gradle Plugin (AGP): &lt;code&gt;8.3.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;Preference&lt;/th&gt;
-          &lt;th&gt;Default Value&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-minSdkVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;24&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-maxSdkVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;em&gt;Not set&lt;/em&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-targetSdkVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;34&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-compileSdkVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;em&gt;android-targetSdkVersion configured value&lt;/em&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-buildToolsVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;34.0.0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;GradleVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;8.7&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;AndroidGradlePluginVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;8.3.0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;GradlePluginKotlinVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;1.9.24&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;p&gt;Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Increased Java Requirement&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;The Java Development Kit (JDK) requirement has been increased to version 17 due to the new versions of dependencies and tooling previously described.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Removed &lt;code&gt;kotlin-android-extensions&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code&gt;kotlin-android-extensions&lt;/code&gt; will no longer be checked out when kotlin is greater than or equal to version &lt;code&gt;1.8.0&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Feature&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Added &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; Preference Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Added support for a general preference to be consistent across platforms for setting the splash screen background color.&lt;/p&gt;
-
-    &lt;p&gt;The following order of priority is applied when it comes to the Cordova Android platform:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;AndroidWindowSplashScreenBackground&lt;/code&gt; preference&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;BackgroundColor&lt;/code&gt; preference&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;#ffffff&lt;/code&gt; hardcoded&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Add Camera Intent Support for File Input Capture&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Allows user to access and use the camera when the HTML file &lt;code&gt;input&lt;/code&gt; tag contains the &lt;code&gt;capture&lt;/code&gt; flag.&lt;/p&gt;
-
-    &lt;p&gt;Example:&lt;/p&gt;
-
-    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;file&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;capture&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Added &lt;code&gt;ResolveServiceWorkerRequests&lt;/code&gt; Preference Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Added a preference that makes it possible for service worker requests to go through the asset loader. By default this is enabled.&lt;/p&gt;
-
-    &lt;p&gt;This can be disabled with the following preference.&lt;/p&gt;
-
-    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;preference&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ResolveServiceWorkerRequests&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-android/issues&quot;&gt;Cordova-android&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1678&quot;&gt;GH-1678&lt;/a&gt; feat!: API 34 Support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1543&quot;&gt;GH-1543&lt;/a&gt; feat!: bump &lt;code&gt;kotlin@1.9.24&lt;/code&gt; &amp;amp; drop &lt;code&gt;kotlin-android-extensions&lt;/code&gt; when kotlin &lt;code&gt;&amp;gt;=1.8.0&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1700&quot;&gt;GH-1700&lt;/a&gt; feat(splash): Support &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1609&quot;&gt;GH-1609&lt;/a&gt; feat: add camera intent with file input capture&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1696&quot;&gt;GH-1696&lt;/a&gt; feat: Add &lt;code&gt;ResolveServiceWorkerRequests&lt;/code&gt; preference&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores, Dependencies &amp;amp; CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1677&quot;&gt;GH-1677&lt;/a&gt; chore(deps-dev): bump &lt;code&gt;@babel/traverse&lt;/code&gt; from &lt;code&gt;7.22.10&lt;/code&gt; to &lt;code&gt;7.23.2&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1713&quot;&gt;GH-1713&lt;/a&gt; dep: bump npm dependencies 20240515
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;semver@7.6.2&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;rewire@7.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;nopt@7.2.1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;jasmine@5.1.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;fs-extra@11.2.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;fast-glob@3.3.2&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;dedent@1.5.3&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;@cordova/eslint-config@5.1.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;which@4.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;properties-parser@0.6.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;android-versions@2.0.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1711&quot;&gt;GH-1711&lt;/a&gt; ci: Set up CodeQL analysis w/ fixes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1687&quot;&gt;GH-1687&lt;/a&gt; ci(release-audit): add license header and dependency checker&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1703&quot;&gt;GH-1703&lt;/a&gt; ci: update &lt;code&gt;codecov@v4&lt;/code&gt; w/ token&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova iOS 7.1.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.1.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.1.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
-cordova platform add ios@7.1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;Features&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;This preference allows you to set the splashscreen&amp;#39;s background colour. If no &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; is provided, it will fall back to the &lt;code&gt;BackgroundColor&lt;/code&gt;, which is the current behavior, and then fallback to the system background colour when nothing is defined.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;code&gt;privacy-manifest&lt;/code&gt; Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;This release supplies the templated blank privacy manifest file, &lt;code&gt;PrivacyInfo.xcprivacy&lt;/code&gt; which can be configured from &lt;code&gt;config.xml&lt;/code&gt;.&lt;/p&gt;
-
-    &lt;p&gt;This release focuses specifically on providing support for app developers to set this configuration, while a later release will introduce support for plugin developers.&lt;/p&gt;
-
-    &lt;p&gt;It is recommended that plugin developers help app developers by providing in their plugin documentation the necessary configuration setup.&lt;/p&gt;
-
-    &lt;p&gt;Below is an example config.xml entry that app developers can define to configure the privacy manifest file.&lt;/p&gt;
-
-    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;platform&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ios&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;privacy-manifest&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyTracking&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;true/&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyCollectedDataTypes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyAccessedAPITypes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyTrackingDomains&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/privacy-manifest&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/platform&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;The contents and values of &lt;code&gt;NSPrivacyTracking&lt;/code&gt;, &lt;code&gt;NSPrivacyCollectedDataTypes&lt;/code&gt;, &lt;code&gt;NSPrivacyAccessedAPITypes&lt;/code&gt;, and &lt;code&gt;NSPrivacyTrackingDomains&lt;/code&gt; will depend on the specific native APIs being utilized.&lt;/p&gt;
-
-    &lt;p&gt;It is recommended to read the Apple Developer documentation to better understand these parameters.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files&quot;&gt;Privacy manifest files&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api&quot;&gt;Describing use of required reason API&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests&quot;&gt;Describing data use in privacy manifests&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Fixes&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Use &lt;code&gt;PROVISIONING_PROFILE_SPECIFIER&lt;/code&gt; for manual codesigning&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Allows you to use either the UUID or name value from the provisioning profile for the build flag &lt;code&gt;provisioningProfile&lt;/code&gt; in either the &lt;code&gt;build.json&lt;/code&gt; configuration file or via the CLI command.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;WASM MIME type error&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Enables WebAssembly support in Cordova WebView.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1411&quot;&gt;GH-1411&lt;/a&gt; feat: &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1406&quot;&gt;GH-1406&lt;/a&gt; feat: add &lt;code&gt;privacy-manifest&lt;/code&gt; config support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1383&quot;&gt;GH-1383&lt;/a&gt; feat: add PrivacyInfo.xcprivacy for CordovaLib &amp;amp; app template&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1405&quot;&gt;GH-1405&lt;/a&gt; fix: use &lt;code&gt;PROVISIONING_PROFILE_SPECIFIER&lt;/code&gt; for manual codesigning&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1374&quot;&gt;GH-1374&lt;/a&gt; fix: WASM MIME type error by specifying it in Info.plist template&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1413&quot;&gt;GH-1413&lt;/a&gt; chore(deps): Modernize some dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1404&quot;&gt;GH-1404&lt;/a&gt; chore: update package &amp;amp; package-lock&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1382&quot;&gt;GH-1382&lt;/a&gt; chore(deps-dev): bump &lt;code&gt;@babel/traverse&lt;/code&gt; from 7.21.4 to 7.23.2&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1380&quot;&gt;GH-1380&lt;/a&gt; chore: Update Slack signup link in SUPPORT_QUESTION.md&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1412&quot;&gt;GH-1412&lt;/a&gt; ci: Fix ObjC testing with latest Xcode&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1408&quot;&gt;GH-1408&lt;/a&gt; ci(gh-action): add Apache RAT &amp;amp; package license checker workflow w/ license header additions&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Electron 4.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Electron 4.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Electron applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-electron&quot;&gt;cordova-electron@4.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove electron
-cordova platform add electron@4.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add electron@4.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;Some of the notable breaking changes in this release are:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Node.js Requirement:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This release requires the environment to have &lt;strong&gt;Node.js&lt;/strong&gt; &lt;code&gt;18.0.0&lt;/code&gt; or higher. It is recommended to use the current LTS, which is &lt;code&gt;20.11.1&lt;/code&gt; at the time of this release.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Electron Update:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Electron&lt;/strong&gt; core dependencies have been updated to &lt;code&gt;29.0.0&lt;/code&gt;. This version of Electron comes with the following app stack:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Chromium 122.0.6261.39&lt;/li&gt;
-  &lt;li&gt;Node v20.9.0&lt;/li&gt;
-  &lt;li&gt;V8 12.2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;More information about Electron 29.0.0 can be read on their &lt;a href=&quot;https://www.electronjs.org/blog/electron-29-0&quot;&gt;blog post here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Removed Plugin Argument&amp;#39;s Accidental Multidimensional Array Wrapping:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In Cordova-Electron 3.0.0, plugin support was introduced, but an unintentional multidimensional array wrapping of the plugin arguments occurred. This wrapping may not have been noticeable to app developers, but it affected plugin developers.&lt;/p&gt;
-
-&lt;p&gt;Typically, a plugin includes a set of APIs that may accept arguments, and these arguments are forwarded to the native side of the plugin. Due to improper argument spreading, plugin developers had to consistently access index 0 at the first level to retrieve the actual arguments, as in &lt;code&gt;args[0][0]&lt;/code&gt;. There was never an &lt;code&gt;args[n+1]&lt;/code&gt; scenario.&lt;/p&gt;
-
-&lt;p&gt;This release corrected this issue. Plugin developers will need to update their plugins if the plugins are designed to read passed-in arguments.&lt;/p&gt;
-
-&lt;p&gt;For a quick start guide and in-depth configuration setup, please check out our &lt;a href=&quot;https://cordova.apache.org/docs/en/12.x/guide/platforms/electron/index.html&quot;&gt;Cordova Electron Documentation&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;h4&gt;Breaking&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/263&quot;&gt;GH-263&lt;/a&gt; feat!: bump &lt;code&gt;electron@^29.0.0&lt;/code&gt; w/ supporting changes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/266&quot;&gt;GH-266&lt;/a&gt; fix!: remove extra array wrapper from passed arguments&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/264&quot;&gt;GH-264&lt;/a&gt; npm(dep)!: bump &lt;code&gt;electron-builder@^24.12.0&lt;/code&gt;, bump node engine requirement &amp;amp; CI
-    &lt;ul&gt;
-      &lt;li&gt;Updates Node Engine Requirement &lt;code&gt;&amp;gt;= 18.0.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/271&quot;&gt;GH-271&lt;/a&gt; dep!: bump &lt;code&gt;fs-extra@^11.2.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/265&quot;&gt;GH-265&lt;/a&gt; npm(dep)!: bump other dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Others&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/232&quot;&gt;GH-232&lt;/a&gt; dep(npm): bump dev dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/270&quot;&gt;GH-270&lt;/a&gt; chore: rebuilt &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;CI:**&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/268&quot;&gt;GH-268&lt;/a&gt; ci: downgrade codecov action dependency to v3&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/267&quot;&gt;GH-267&lt;/a&gt; ci: add node 20.x &amp;amp; use latest action dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/236&quot;&gt;GH-236&lt;/a&gt; ci: update github action workflow&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/03/11/cordova-electron-release-4.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/03/11/cordova-electron-release-4.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Survey 2023 Results</title>
-        <description>&lt;p&gt;Thank you very much for taking part in our user &amp;amp; contributor survey. We received 228 submissions. Let&amp;#39;s dive straight into the data.&lt;/p&gt;
-
-&lt;p&gt;This survey got over 200 responses and considering only a fraction of people who actually see the survey will respond, there are probably quite a lot of happy Cordova users and new and long-running app projects out there. We got some good feedback of the most requested improvements and biggest pain points.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;Obviously almost all respondents work with Cordova and the most used platforms are &lt;strong&gt;Android (97.4%), iOS (89%)&lt;/strong&gt;, Browser (21.1%) and Electron (7%). Windows and macOS Catalyst got only a handful of responses in total.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image7.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Chart platforms&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Build apps with access to native features not yet present in the web platform&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The top 3 reasons for picking Cordova are &lt;strong&gt;ease of use, cross-platform support and the prevalence and familiarity of web skills and technologies&lt;/strong&gt;. These reasons all were mentioned almost equally. Quite a few (~20) users mentioned that Cordova was chosen a while ago, or they migrated from Phonegap (~7). There are probably quite a few long-running Cordova projects out there. Other mentioned reasons are the support of native features, Ionic, fast development, maturity of the project and open source.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It is easy to write, inspect and debug like a webpage&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2&gt;Alternatives&lt;/h2&gt;
-
-&lt;p&gt;Cordova&amp;#39;s unofficial goal has always been to cease to exist once the Web catches up with supporting new APIs and features similar to native. Therefore, it&amp;#39;s good news that a small number of users (6.1%) migrated their apps to &lt;strong&gt;PWAs&lt;/strong&gt;. About 13% migrated to &lt;strong&gt;Capacitor&lt;/strong&gt; and 3% to Flutter and React-Native each. About 2% of projects moved to Electron or fully native. Around 4% are thinking about or are in the process of migrating.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image2.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Chart migrating&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Only 23.2% of respondents have migrated apps to alternative solutions.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The biggest reason to migrate is &lt;strong&gt;not well maintained plugins&lt;/strong&gt; followed by &lt;strong&gt;operating system and app store compatibility issues&lt;/strong&gt; and &lt;strong&gt;slow development of the framework itself&lt;/strong&gt;. This is something we as the Cordova community needs to address. Some users also mentioned the fear of long term support. Others had build or Gradle issues or preferred more modern frameworks with Typescript support and a better developer experience. WebView and performance issues also got mentioned a handful of times.&lt;/p&gt;
-
-&lt;h2&gt;Contributing&lt;/h2&gt;
-
-&lt;p&gt;Only a minority of respondents (21.1%) have contributed to Apache maintained plugins, platforms, or tooling and 17.5% would love to start contributing.&lt;/p&gt;
-
-&lt;p&gt;The answers to the question &amp;quot;What&amp;#39;s holding you back from contributing?&amp;quot; are probably pretty typical for open source projects. The biggest factors are time (53%) and work-life-balance (37%). The second most mentioned reasons &lt;strong&gt;I need help getting started&lt;/strong&gt; (21%) and &lt;strong&gt;Imposter Syndrome&lt;/strong&gt; (10%) we should address with better documentation and support for first contributors.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image1.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Chart contributing&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For those who are interested in contributing to Apache Cordova, the best way is to submit PR. It could be to fix a known issue that you might have or others have reported, or submitting new features. In terms of Work-Life balance, Apache Cordova is based on volunteering. There is no requirement in dedicating time every day. Usually some might work on Cordova for a few minutes when they can spare.&lt;/p&gt;
-
-&lt;p&gt;Some users develop for the Web only and don&amp;#39;t want to get into the native part which is totally fair because that&amp;#39;s the point of using Cordova. Developing plugins and getting into Cordova internals is not as hard and scary as it might look at first, and we really need your support for the project.&lt;/p&gt;
-
-&lt;p&gt;We also included a question about &lt;strong&gt;release voting&lt;/strong&gt; because we think that most users don&amp;#39;t know how the release process at Apache works. For every release we need at least 3 members of the PMC to check and cast a positive vote on the release. Persons who are not part of the PMC can vote as well and help test the release. The voting and decision process for releases happens on the mailing list. Sometimes it can take a while to finally publish a release because 3 PMC members need to find time to check it. If we can onboard new members, releases might happen a little faster again.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image4.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Chart voting&quot; /&gt;&lt;/p&gt;
-
-&lt;h2&gt;Areas of improvement&lt;/h2&gt;
-
-&lt;p&gt;One of the main reasons to run this survey was to identify the pain points for many Cordova developers. If we can identify the areas that need improvements we can gather ideas for quick fixes and long term goals.&lt;/p&gt;
-
-&lt;p&gt;The most mentioned issues is the &lt;strong&gt;lack of maintenance for third party plugins&lt;/strong&gt;. More on that in the next paragraph. The second-biggest pain point is keeping up with App/Play store requirements and OS API changes combined with &lt;strong&gt;slow releases and breaking updates&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Many users also mentioned issues with &lt;strong&gt;native projects&lt;/strong&gt;. They tend to break with updates or require manual changes that cause headaches with Cordovas hooks and ephemeral native projects.&lt;/p&gt;
-
-&lt;p&gt;Quite a lot of pain points also involve around &lt;strong&gt;documentation&lt;/strong&gt;. We should work on better documentation for config.xml and how to develop plugins. Some users also would like (video) tutorials. Sometimes information about new features or changes are hidden somewhere in PRs, issues and comments. We should do a better job updating the documentation.&lt;/p&gt;
-
-&lt;p&gt;Some users also fear the longevity of the project and think that new APIs and changes take too long to be supported. The project is quite old, and some code is considered legacy code today and some users would like to see support for new languages like Typescript, Swift, Kotlin.&lt;/p&gt;
-
-&lt;h2&gt;Plugins&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I’m so grateful for the plugins! I understand how hard they can be to maintain.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Most respondents didn&amp;#39;t share any feedback for plugins and quite a few mentioned they were pleased with Cordova&amp;#39;s plugin ecosystem.&lt;/p&gt;
-
-&lt;p&gt;Because of its maturity and age there are many Cordova plugins for almost any use case, but the lack of maintenance is concerning for a lot of users. Quite a few plugin authors moved on and longer maintain their plugin and users have a hard time finding working forks and fixes. Some respondents suggested that a list of curated plugins could help with that.&lt;/p&gt;
-
-&lt;p&gt;Some users also find developing and testing plugins very hard.&lt;/p&gt;
-
-&lt;h3&gt;Some user voices&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Building cordova plugins is not ideal because the plugins are authored outside of any native project which makes it hard to develop and test. Not having the native project available means the plugin cannot be built independently of a cordova project, cannot be tested independently of a cordova project, and cannot make use of the standard IDE with intellisense without a cordova project.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;There are many Cordova plugins that are currently not maintained, which makes adding a new plugin to a project really painful, as you always have to check if the plugin is still functional and if there are alternative plugins.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Overall, very good, considering they&amp;#39;re mostly by volunteers. But my impression has been that some plugins that have no alternative aren&amp;#39;t always well-maintained (no specific examples, sorry).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Sometimes poorly maintained, slow to implement fixes, outdated, etc. But yet still critical for any real Cordova project&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I always end up forking them due to them no being updated with each Cordova release&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Cordova makes it simple to build plugins.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2&gt;Closing words&lt;/h2&gt;
-
-&lt;p&gt;As you might know, most of the maintainers are volunteers and work on Cordova in their free time. Therefore, we need your help ensuring that Cordova remains a robust and reliable platform for building mobile apps. Your involvement, whether it&amp;#39;s providing feedback, fixing bugs, or developing plugins, is essential to ensuring Cordova&amp;#39;s continued relevance and adoption. The Cordova PMC will do its best to make contributing as easy as possible and provide developer guidance, code reviews, documentation, and frequent releases. A large portion of bug fixes, plugins and features have been provided by dedicated individuals for many years now and will be in the future. You can contribute to Cordova&amp;#39;s future success with your fixes, solutions, plugins and collaboration on releases.&lt;/p&gt;
-
-&lt;p&gt;Thank you for being a part of the Cordova community. Together, we can shape the future of mobile development.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/01/12/survey-results.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/01/12/survey-results.html</guid>
-        
-        <category>news</category>
         
         
         <category>announcements</category>
